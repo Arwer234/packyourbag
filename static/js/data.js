@@ -4135,5 +4135,9 @@ export const Data = {
         podreczny:false,
         glowny:true,
     },
+    "znicz":{
+        podreczny:true,
+        glowny:true,
+    }
 
 }
