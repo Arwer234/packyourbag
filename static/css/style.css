@@ -6,7 +6,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("../gfx/mainpage.jpg");
+    background-image: url("https://images.pexels.com/photos/417045/pexels-photo-417045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     height: 100vh;
     margin:0;
     padding:0;
