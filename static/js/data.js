@@ -1,4 +1,4 @@
-export const Data = {
+exports.Data = {
     "nóż":{
         podreczny:false,
         glowny:true,
@@ -147,7 +147,7 @@ export const Data = {
         podreczny:true,
         glowny:true,
     },
-    " krótkie spodenki":{
+    "krótkie spodenki":{
         podreczny:true,
         glowny:true,
     },
