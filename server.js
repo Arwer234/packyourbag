@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/static'));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/static/index.html")
 })
-app.post('/getItemData', (req,res)=>{
+app.post('/getItemData',cors(), (req,res)=>{
     console.log(JSON.parse(JSON.stringify(itemData['Data'])))
     res.send(JSON.stringify(itemData['Data']))
 })
