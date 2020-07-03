@@ -8,8 +8,8 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/static/index.html")
 })
 app.post('/getItemData', (req,res)=>{
-    console.log(itemData['Data'])
-    res.send(itemData['Data'])
+    console.log(JSON.parse(JSON.stringify(itemData['Data'])))
+    res.send(JSON.stringify(itemData['Data']))
 })
 
 app.listen(3000, () => console.log(`Example app listening at: ` + 3000))
