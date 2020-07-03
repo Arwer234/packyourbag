@@ -19,26 +19,7 @@
     }
 }
 
-@media all and (max-width: 1400px) {
-    html {
-        font-size: 14px;
-    }
-    #enter{
-        display:none;
-    }
-    #socialMedias{
-        left:81%;
-    }
-    #luggage{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #main,#hand{
-        width:90vw;
-        height:30vh;
-    }
-}
+
 
 @media all and (max-width: 1200px) {
     html {
