@@ -29,8 +29,7 @@
                 url: "https://packyourbag.pl/getItemData",
                 type: "POST",
                 success: function (data) {
-                    console.log(data)
-                    obj = data
+                    obj = JSON.parse(data)
                     areItemsReady = true
                     $("#search")
                         .autocomplete({
