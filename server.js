@@ -1,5 +1,6 @@
 var express = require("express")
 var app = express();
+var cors = require('cors')
 var http = require('http').createServer(app);
 var itemData = require("./static/js/data")
 app.use(express.static(__dirname + '/static'));

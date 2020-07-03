@@ -23,6 +23,20 @@
         var mainTemp = ""
         var handTemp = ""
         var obj = {}
+        fetch("https://packyourbag.pl/getItemData")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    console.log(result)
+                },
+                    
+                // Uwaga: to ważne, żeby obsłużyć błędy tutaj, a
+                // nie w bloku catch(), aby nie przetwarzać błędów
+                // mających swoje źródło w komponencie.
+                (error) => {
+                    console.log(error)
+                }
+            )
         $(document).ready(function () {
 
             $.ajax({
