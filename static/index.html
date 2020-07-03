@@ -23,7 +23,9 @@
         var mainTemp = ""
         var handTemp = ""
         var obj = {}
-        fetch("https://packyourbag.pl/getItemData")
+        fetch("https://packyourbag.pl/getItemData/",{
+            mode:"no-cors"
+        })
             .then(res => res.json())
             .then(
                 (result) => {
