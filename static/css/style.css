@@ -148,7 +148,7 @@ body{
     animation-fill-mode: forwards;
 }
 .colorChangeAnim{
-    animation: changeColor 1.5s ease;
+    animation: changeColor 1s ease;
     animation-fill-mode: none;
 }
 #socialMedias img{
