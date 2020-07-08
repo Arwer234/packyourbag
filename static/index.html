@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="luggage, transport, flight, travel, packing, trip, airplane">
+    <meta name="description" content="Wszystkie informacje o bagażu lotniczym w jednym miejscu!">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lotnisko</title>
+    <title>Informacje bagażowe</title>
     <link type="text/css" rel="stylesheet" href="/css/jquery-ui.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -23,22 +25,6 @@
         var mainTemp = ""
         var handTemp = ""
         var obj = {}
-        fetch("https://packyourbag.pl/getItemData/",{
-            mode:"no-cors"
-        })
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    console.log(result)
-                },
-                    
-                // Uwaga: to ważne, żeby obsłużyć błędy tutaj, a
-                // nie w bloku catch(), aby nie przetwarzać błędów
-                // mających swoje źródło w komponencie.
-                (error) => {
-                    console.log(error)
-                }
-            )
         $(document).ready(function () {
 
             $.ajax({
@@ -73,21 +59,31 @@
         var linkNotAccepted = "/gfx/x.png"
         var linkConditionally = "/gfx/warning.png"
         var areItemsReady = false
+        var firstSearch = true
 
         function handle(e) {
             if (e.keyCode === 13) {
                 e.preventDefault()
                 sendEnteredPhrase()
-                $("#navbar").addClass('topNavbar')
-                setTimeout(() => {
-                    $("#luggage").css('display', 'flex')
-                }, 1000)
             }
         }
         function sendEnteredPhrase() {
             if (areItemsReady) {
                 var enteredPhrase = document.getElementById("search").value
-                checkIfBanned(enteredPhrase)
+                if(firstSearch) {
+                    checkIfBanned(enteredPhrase)
+                }
+                else{
+                    $("#main").addClass("colorChangeAnim")
+                    $("#hand").addClass("colorChangeAnim")
+                    setTimeout(()=>{
+                        checkIfBanned(enteredPhrase)
+                    },500)
+                    setTimeout(()=>{
+                        $("#main").removeClass("colorChangeAnim").removeClass("luggageAppearAnim")
+                        $("#hand").removeClass("colorChangeAnim").removeClass("luggageAppearAnim")
+                    },1500)
+                }
             }
             else {
                 alert("pliki nie gotowe")
@@ -97,7 +93,7 @@
             for (key in obj) {
                 if (enteredPhrase.toLowerCase() == key.toLowerCase()) {
                     wasInSearch = true
-                    console.log(obj[key])
+
                     if (obj[key].glowny) {
                         changePrompt("main", "accepted")
                     }
@@ -115,14 +111,23 @@
                     }
                 }
             }
-            if (!wasInSearch) {
+            if (wasInSearch) {
+                if (firstSearch) {
+                    $("#navbar").addClass('topNavbar')
+                    setTimeout(() => {
+                        $("#luggage").css('display', 'flex')
+                        $("#main").addClass("luggageAppearAnim")
+                        $("#hand").addClass("luggageAppearAnim")
+                    }, 1000)
+                    firstSearch = false
+                }
+            }
+            else{
                 alert("Brak w bazie")
             }
             wasInSearch = false
         }
         function changePrompt(type, decision) {
-            console.log(type, decision)
-
             if (decision == "accepted") {
                 document.getElementById(type).style.backgroundColor = "rgba(0,255,0,0.7)"
                 document.getElementById(type + "Check").setAttribute("src", linkToAccepted)
@@ -156,7 +161,6 @@
                 }
                 document.getElementById("handInfo").innerText = ""
             }
-            console.log(mainTemp, handTemp)
         }
 
     </script>
