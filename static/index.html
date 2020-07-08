@@ -52,6 +52,19 @@
                     console.log(xhr);
                 },
             });
+            $(".warning").on("mouseover", function () {
+                $(this).addClass("warningSlideAnim")
+                setTimeout(() => {
+                    $(this).text("Powyższy wykaz ma charakter wyłącznie informacyjny i jego przeznaczeniem jest ułatwienie pasażerom sprawnego odbycia podróży. Prosimy jednakże pamiętać, że operator kontroli bezpieczeństwa dokonuje samodzielnej decyzji o dopuszczeniu przedmiotu na pokład i pasażer ponosi odpowiedzialność za swoje mienie.")
+                }, 1000)
+            })
+            $(".warning").on("mouseout", function () {
+                $(this).removeClass("warningSlideAnim")
+                $(this).addClass("warningBackSlideAnim")
+
+                $(this).text("")
+            })
+
         })
         var wasInSearch = false
         var searchedValue = ""
@@ -70,19 +83,19 @@
         function sendEnteredPhrase() {
             if (areItemsReady) {
                 var enteredPhrase = document.getElementById("search").value
-                if(firstSearch) {
+                if (firstSearch) {
                     checkIfBanned(enteredPhrase)
                 }
-                else{
+                else {
                     $("#main").addClass("colorChangeAnim")
                     $("#hand").addClass("colorChangeAnim")
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         checkIfBanned(enteredPhrase)
-                    },500)
-                    setTimeout(()=>{
+                    }, 500)
+                    setTimeout(() => {
                         $("#main").removeClass("colorChangeAnim").removeClass("luggageAppearAnim")
                         $("#hand").removeClass("colorChangeAnim").removeClass("luggageAppearAnim")
-                    },1000)
+                    }, 1000)
                 }
             }
             else {
@@ -122,7 +135,7 @@
                     firstSearch = false
                 }
             }
-            else{
+            else {
                 alert("Brak w bazie")
             }
             wasInSearch = false
@@ -167,44 +180,56 @@
 </head>
 
 <body>
-    <div id="navbar">
-        <input onkeypress="handle(event)" id="search" type="text" placeholder="Nazwa przedmiotu..." />
-        <img id="enter" onclick="sendEnteredPhrase()" src="https://static.thenounproject.com/png/620845-200.png" />
-        <div id="socialMedias">
-            <a href="https://www.facebook.com/Packyourbag-109337594166249/?view_public_for=109337594166249"><img
-                    src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" /></a>
-            <a href="https://twitter.com/?lang=pl"><img
-                    src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-twitter-512.png" /></a>
-        </div>
-    </div>
-    <div id="luggage">
-        <div id="adLeft"></div>
-        <div id="main">
-            <h1>Bagaż Główny
-                <br>
-                Rejestrowany
-            </h1>
-            <img id="mainCheck" src="" />
-            <p id="mainInfo"><br /></p>
-        </div>
-        <div id="adMid"></div>
-        <div id="hand">
-            <h1>Bagaż Podręczny
-                <br />
-                Kabinowy
-            </h1>
-            <img id="handCheck" src="" />
-            <p id="handInfo">Tylko w pojemnikach, do pojemności 100 ml</p>
-        </div>
-        <div id="adRight"></div>
-    </div>
-    <div id="footer">
-        <p>Powyższy wykaz ma charakter wyłącznie informacyjny i jego przeznaczeniem jest ułatwienie pasażerom sprawnego
-            odbycia
-            podróży. Prosimy jednakże pamiętać, że operator kontroli bezpieczeństwa dokonuje samodzielnej decyzji o
-            dopuszczeniu
-            przedmiotu na pokład i pasażer ponosi odpowiedzialność za swoje mienie.</p>
+    <div id="infobar">
+        <div class="warning">
+            <img style="width: 50px"
+                src="https://p7.hiclipart.com/preview/97/794/538/tech-one-inc-computer-icons-website-shutterstock-information-icon-clip-art-at-clker-com-vector-clip-art-online.jpg" />
 
+        </div>
+    </div>
+    <div id="siteBody">
+
+
+        <div id="navbar">
+            <input onkeypress="handle(event)" id="search" type="text" placeholder="Nazwa przedmiotu..." />
+            <img id="enter" onclick="sendEnteredPhrase()" src="https://static.thenounproject.com/png/620845-200.png" />
+            <div id="socialMedias">
+                <a href="https://www.facebook.com/Packyourbag-109337594166249/?view_public_for=109337594166249"><img
+                        src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" /></a>
+                <a href="https://twitter.com/?lang=pl"><img
+                        src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-twitter-512.png" /></a>
+            </div>
+        </div>
+        <div id="luggage">
+            <div id="adLeft"></div>
+            <div id="main">
+                <h1>Bagaż Główny
+                    <br>
+                    Rejestrowany
+                </h1>
+                <img id="mainCheck" src="" />
+                <p id="mainInfo"><br /></p>
+            </div>
+            <div id="adMid"></div>
+            <div id="hand">
+                <h1>Bagaż Podręczny
+                    <br />
+                    Kabinowy
+                </h1>
+                <img id="handCheck" src="" />
+                <p id="handInfo">Tylko w pojemnikach, do pojemności 100 ml</p>
+            </div>
+            <div id="adRight"></div>
+        </div>
+        <div id="footer">
+            <p>Powyższy wykaz ma charakter wyłącznie informacyjny i jego przeznaczeniem jest ułatwienie pasażerom
+                sprawnego
+                odbycia
+                podróży. Prosimy jednakże pamiętać, że operator kontroli bezpieczeństwa dokonuje samodzielnej decyzji o
+                dopuszczeniu
+                przedmiotu na pokład i pasażer ponosi odpowiedzialność za swoje mienie.</p>
+
+        </div>
     </div>
 </body>
 
