@@ -43,6 +43,14 @@
                             $("#mainCheck").attr("src", "https://thumbs.gfycat.com/FaintSpicyAnnashummingbird-small.gif")
                             $("#handCheck").attr("src", "https://thumbs.gfycat.com/FaintSpicyAnnashummingbird-small.gif")
                         })
+                        .on("keydown", function (e) {
+                            if (e.keyCode == 8 || e.keyCode == 46) {
+                                mainTemp = $("#mainCheck").attr("src")
+                                handTemp = $("#handCheck").attr("src")
+                                $("#mainCheck").attr("src", "https://thumbs.gfycat.com/FaintSpicyAnnashummingbird-small.gif")
+                                $("#handCheck").attr("src", "https://thumbs.gfycat.com/FaintSpicyAnnashummingbird-small.gif")
+                            }
+                        })
                         .on("blur", function () {
                             $("#mainCheck").attr("src", mainTemp)
                             $("#handCheck").attr("src", handTemp)
@@ -56,7 +64,7 @@
             $(".warning").on("mouseover", function () {
                 $(this).removeClass("warningBackSlideAnim")
                 $(this).addClass("warningSlideAnim")
-                $(this).css("background-image","none")
+                $(this).css("background-image", "none")
                 textAppearing = setTimeout(() => {
                     $(this).text("Wykaz ma charakter wyłącznie informacyjny i jego przeznaczeniem jest ułatwienie pasażerom odbycia podróży. Prosimy pamiętać, że operator kontroli dokonuje decyzji o dopuszczeniu przedmiotu na pokład i pasażer ponosi odpowiedzialność za swoje mienie.")
                 }, 1000)
@@ -66,7 +74,7 @@
                 $(this).addClass("warningBackSlideAnim")
                 clearInterval(textAppearing)
                 $(this).empty()
-                $(this).css("background-image","url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/OOjs_UI_icon_info.svg/1200px-OOjs_UI_icon_info.svg.png)")
+                $(this).css("background-image", "url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/OOjs_UI_icon_info.svg/1200px-OOjs_UI_icon_info.svg.png)")
 
             })
 
@@ -137,7 +145,7 @@
                         $("#luggage").css('display', 'flex')
                         $("#main").addClass("luggageAppearAnim")
                         $("#hand").addClass("luggageAppearAnim")
-                        $(".warning").css("display","none")
+                        $(".warning").css("display", "none")
                     }, 1000)
                     firstSearch = false
                 }
@@ -194,7 +202,8 @@
 
 
         <div id="navbar">
-            <input onkeypress="handle(event)" id="search" type="text" placeholder="Co chcesz umieścić w swoim bagażu?" />
+            <input onkeypress="handle(event)" id="search" type="text"
+                placeholder="Co chcesz umieścić w swoim bagażu?" />
             <img id="enter" onclick="sendEnteredPhrase()" src="https://static.thenounproject.com/png/620845-200.png" />
             <div id="socialMedias">
                 <a href="https://www.facebook.com/Packyourbag-109337594166249/?view_public_for=109337594166249"><img
