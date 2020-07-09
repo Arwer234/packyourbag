@@ -52,17 +52,22 @@
                     console.log(xhr);
                 },
             });
+            var textAppearing
             $(".warning").on("mouseover", function () {
+                $(this).removeClass("warningBackSlideAnim")
                 $(this).addClass("warningSlideAnim")
-                setTimeout(() => {
-                    $(this).text("Powyższy wykaz ma charakter wyłącznie informacyjny i jego przeznaczeniem jest ułatwienie pasażerom sprawnego odbycia podróży. Prosimy jednakże pamiętać, że operator kontroli bezpieczeństwa dokonuje samodzielnej decyzji o dopuszczeniu przedmiotu na pokład i pasażer ponosi odpowiedzialność za swoje mienie.")
+                $(this).css("background-image","none")
+                textAppearing = setTimeout(() => {
+                    $(this).text("Wykaz ma charakter wyłącznie informacyjny i jego przeznaczeniem jest ułatwienie pasażerom odbycia podróży. Prosimy pamiętać, że operator kontroli dokonuje decyzji o dopuszczeniu przedmiotu na pokład i pasażer ponosi odpowiedzialność za swoje mienie.")
                 }, 1000)
             })
             $(".warning").on("mouseout", function () {
                 $(this).removeClass("warningSlideAnim")
                 $(this).addClass("warningBackSlideAnim")
+                clearInterval(textAppearing)
+                $(this).empty()
+                $(this).css("background-image","url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/OOjs_UI_icon_info.svg/1200px-OOjs_UI_icon_info.svg.png)")
 
-                $(this).text("")
             })
 
         })
@@ -126,11 +131,13 @@
             }
             if (wasInSearch) {
                 if (firstSearch) {
+                    $(".warning").addClass('fadeOutAnim')
                     $("#navbar").addClass('topNavbar')
                     setTimeout(() => {
                         $("#luggage").css('display', 'flex')
                         $("#main").addClass("luggageAppearAnim")
                         $("#hand").addClass("luggageAppearAnim")
+                        $(".warning").css("display","none")
                     }, 1000)
                     firstSearch = false
                 }
@@ -181,17 +188,13 @@
 
 <body>
     <div id="infobar">
-        <div class="warning">
-            <img style="width: 50px"
-                src="https://p7.hiclipart.com/preview/97/794/538/tech-one-inc-computer-icons-website-shutterstock-information-icon-clip-art-at-clker-com-vector-clip-art-online.jpg" />
-
-        </div>
+        <div class="warning"></div>
     </div>
     <div id="siteBody">
 
 
         <div id="navbar">
-            <input onkeypress="handle(event)" id="search" type="text" placeholder="Nazwa przedmiotu..." />
+            <input onkeypress="handle(event)" id="search" type="text" placeholder="Co chcesz umieścić w swoim bagażu?" />
             <img id="enter" onclick="sendEnteredPhrase()" src="https://static.thenounproject.com/png/620845-200.png" />
             <div id="socialMedias">
                 <a href="https://www.facebook.com/Packyourbag-109337594166249/?view_public_for=109337594166249"><img
@@ -220,15 +223,6 @@
                 <p id="handInfo">Tylko w pojemnikach, do pojemności 100 ml</p>
             </div>
             <div id="adRight"></div>
-        </div>
-        <div id="footer">
-            <p>Powyższy wykaz ma charakter wyłącznie informacyjny i jego przeznaczeniem jest ułatwienie pasażerom
-                sprawnego
-                odbycia
-                podróży. Prosimy jednakże pamiętać, że operator kontroli bezpieczeństwa dokonuje samodzielnej decyzji o
-                dopuszczeniu
-                przedmiotu na pokład i pasażer ponosi odpowiedzialność za swoje mienie.</p>
-
         </div>
     </div>
 </body>
