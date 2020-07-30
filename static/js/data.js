@@ -2953,6 +2953,18 @@ exports.Data = {
         podreczny:true,
         glowny:true,
     },
+    "zastawa porcelanowa":{
+        podreczny:true,
+        glowny:true,
+    },
+    "serwis obiadowy porcelana":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kubek":{
+        podreczny:true,
+        glowny:true,
+    },
     "garnki":{
         podreczny:true,
         glowny:true,
@@ -3362,6 +3374,10 @@ exports.Data = {
         podreczny:true,
         glowny:true,
     },
+    "pilnik do paznokci papierowy":{
+        podreczny:true,
+        glowny:true,
+    },
     "pilnik do paznokci":{
         podreczny:true,
         glowny:true,
@@ -3391,6 +3407,18 @@ exports.Data = {
         glowny:true,
     },
     "maszynki do golenia":{
+        podreczny:true,
+        glowny:true,
+    },
+    "maszynka do szycia ręczna":{
+        podreczny:true,
+        glowny:true,
+    },
+    "maszynka elektryczna do golenia":{
+        podreczny:true,
+        glowny:true,
+    },
+    "maszynka elektryczna do depilacji":{
         podreczny:true,
         glowny:true,
     },
@@ -4062,6 +4090,10 @@ exports.Data = {
         glowny:true,
         conditionally:true,
     },
+    "puder w proszku":{
+        podreczny:true,
+        glowny:true,
+    },
     "błyszczyk do ust":{
         podreczny:true,
         glowny:true,
@@ -4138,6 +4170,171 @@ exports.Data = {
     "znicz":{
         podreczny:true,
         glowny:true,
-    }
-
+    },
+    "wibrator":{
+        podreczny:true,
+        glowny:true,
+    },
+    "wieszak":{
+        podreczny:true,
+        glowny:true,
+    },
+    "pęseta":{
+        podreczny:true,
+        glowny:true,
+    },
+    "pinceta":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kulki analne":{
+        podreczny:true,
+        glowny:true,
+    },
+    "dildo":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kulki gejszy":{
+        podreczny:true,
+        glowny:true,
+    },
+    "strap-on":{
+        podreczny:true,
+        glowny:true,
+    },
+    "proteza penisa":{
+        podreczny:true,
+        glowny:true,
+    },
+    "palcat":{
+        podreczny:true,
+        glowny:true,
+    },
+    "szpicruta":{
+        podreczny:true,
+        glowny:true,
+    },
+    "pejcz":{
+        podreczny:true,
+        glowny:true,
+    },
+    "smyczek":{
+        podreczny:true,
+        glowny:true,
+    },
+    "globulki dopochwowe":{
+        podreczny:true,
+        glowny:true,
+    },
+    "czopki":{
+        podreczny:true,
+        glowny:true,
+    },
+    "cążki do skórek":{
+        podreczny:true,
+        glowny:true,
+    },
+    "ostrogi":{
+        podreczny:false,
+        glowny:true,
+    },
+    "parasol":{
+        podreczny:true,
+        glowny:true,
+    },
+    "nocnik":{
+        podreczny:true,
+        glowny:true,
+    },
+    "namiot bez śledzi i szpilek":{
+        podreczny:true,
+        glowny:true,
+    },
+    "granat - owoc":{
+        podreczny:true,
+        glowny:true,
+    },
+    "pinezki":{
+        podreczny:true,
+        glowny:true,
+    },
+    "szczoteczka elektryczna":{
+        podreczny:true,
+        glowny:true,
+    },
+    "e-papieros":{
+        podreczny:true,
+        glowny:true,
+    },
+    "świeczka":{
+        podreczny:true,
+        glowny:true,
+    },
+    "świeca":{
+        podreczny:true,
+        glowny:true,
+    },
+    "świeca elektryczna":{
+        podreczny:true,
+        glowny:true,
+    },
+    "świeca woskowa":{
+        podreczny:true,
+        glowny:true,
+    },
+    "stetoskop":{
+        podreczny:true,
+        glowny:true,
+    },
+    "pean - narzedzie chirulgiczne":{
+        podreczny:false,
+        glowny:true,
+    },
+    "kleszcze medyczne - pean":{
+        podreczny:true,
+        glowny:true,
+    },
+    "szczypiorek":{
+        podreczny:true,
+        glowny:true,
+    },
+    "inhalator":{
+        podreczny:true,
+        glowny:true,
+    },
+    "lek wziewny":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "spray do gardła":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "lek w aerozolu":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "spray do nosa":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "spray na alergie":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "leki medyczne w aerozolu":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "lalka gumowa":{
+        podreczny:true,
+        glowny:true,
+    },
 }
