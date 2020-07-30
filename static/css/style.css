@@ -17,13 +17,14 @@
         width:20vw;
         height:60vh;
     }
+    
 }
 
 
 
 @media all and (max-width: 1200px) {
     html {
-        font-size: 12px;
+        font-size: 10px;
     }
     #enter{
         display:none;
@@ -131,13 +132,13 @@ body{
 }
 #mainCheck,#handCheck{
     width:12vw;
+    max-width:300px;
 }
 #adLeft,#adMid,#adRight{
     display:flex;
     flex:1;
 }
 .topNavbar{
-    top:2%;
     animation: slide 1s ease;
     animation-fill-mode: forwards;
 }
@@ -155,16 +156,22 @@ body{
     padding-right:0.5vh;
 }
 .warning{
-    width:7%;
-    height: 10%;
     background-color: rgba(255,255,255,0.7);
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/OOjs_UI_icon_info.svg/1200px-OOjs_UI_icon_info.svg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
     position: absolute;
     left:0;
     top:0;
-    font-size:10px;
-    
+    font-size:0.8rem;
+    height:50px;
+    width:50px;
     border-radius: 0 20px 20px 0;
+    text-align: center;
+    padding:10px;
+    z-index:1;
+    overflow: hidden;
 }
 .warningSlideAnim{
     animation: warningSlide 1s ease;
@@ -174,20 +181,27 @@ body{
     animation: warningBackSlide 1s ease;
     animation-fill-mode: forwards;
 }
-.siteBody{
+#siteBody{
     display:flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     height: 100vh;
+    width:100vw;
     margin:0;
     padding:0;
 }
 h1{
-    font-size:3vw;
+    font-size:2rem;
 }
+.fadeOutAnim{
+    animation: fadeOut 1s ease;
+    animation-fill-mode: forwards;
+}
+
 @keyframes slide {
     100% {
-      top: 2%;
+      top: 5%;
     }
   
 }
@@ -197,6 +211,14 @@ h1{
     }
     100%{
         opacity:1;
+    }
+}
+@keyframes fadeOut{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
     }
 }
 @keyframes changeColor{
@@ -215,7 +237,7 @@ h1{
 }
 @keyframes warningSlide{
     0%{
-        width:7%;
+        width:50px;
     }
     100%{
         width:50%;
@@ -226,15 +248,10 @@ h1{
         width:50%;
     }
     100%{
-        width:7%;
+        width:50px;
     }
 }
-#handInfo{
+#handInfo, #mainInfo{
     font-weight: bold;
     font-size:1.9vw;
-}
-#adInFooter{
-    flex:2;
-    width:80%;
-    background-color: white;
 }

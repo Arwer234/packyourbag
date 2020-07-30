@@ -11,8 +11,7 @@
     <link type="text/css" rel="stylesheet" href="/css/jquery-ui.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script data-ad-client="ca-pub-1538658242858314" async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-1538658242858314" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link type="text/css" rel="stylesheet" href="/css/style.css">
     <style>
         .ui-autocomplete {
@@ -43,6 +42,14 @@
                             $("#mainCheck").attr("src", "https://thumbs.gfycat.com/FaintSpicyAnnashummingbird-small.gif")
                             $("#handCheck").attr("src", "https://thumbs.gfycat.com/FaintSpicyAnnashummingbird-small.gif")
                         })
+                        .on("keydown", function (e) {
+                            if (e.keyCode == 8 || e.keyCode == 46) {
+                                mainTemp = $("#mainCheck").attr("src")
+                                handTemp = $("#handCheck").attr("src")
+                                $("#mainCheck").attr("src", "https://thumbs.gfycat.com/FaintSpicyAnnashummingbird-small.gif")
+                                $("#handCheck").attr("src", "https://thumbs.gfycat.com/FaintSpicyAnnashummingbird-small.gif")
+                            }
+                        })
                         .on("blur", function () {
                             $("#mainCheck").attr("src", mainTemp)
                             $("#handCheck").attr("src", handTemp)
@@ -52,17 +59,22 @@
                     console.log(xhr);
                 },
             });
+            var textAppearing
             $(".warning").on("mouseover", function () {
+                $(this).removeClass("warningBackSlideAnim")
                 $(this).addClass("warningSlideAnim")
-                setTimeout(() => {
-                    $(this).text("Powyższy wykaz ma charakter wyłącznie informacyjny i jego przeznaczeniem jest ułatwienie pasażerom sprawnego odbycia podróży. Prosimy jednakże pamiętać, że operator kontroli bezpieczeństwa dokonuje samodzielnej decyzji o dopuszczeniu przedmiotu na pokład i pasażer ponosi odpowiedzialność za swoje mienie.")
+                $(this).css("background-image", "none")
+                textAppearing = setTimeout(() => {
+                    $(this).text("Wykaz ma charakter wyłącznie informacyjny i jego przeznaczeniem jest ułatwienie pasażerom odbycia podróży. Prosimy pamiętać, że operator kontroli dokonuje decyzji o dopuszczeniu przedmiotu na pokład i pasażer ponosi odpowiedzialność za swoje mienie.")
                 }, 1000)
             })
             $(".warning").on("mouseout", function () {
                 $(this).removeClass("warningSlideAnim")
                 $(this).addClass("warningBackSlideAnim")
+                clearInterval(textAppearing)
+                $(this).empty()
+                $(this).css("background-image", "url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/OOjs_UI_icon_info.svg/1200px-OOjs_UI_icon_info.svg.png)")
 
-                $(this).text("")
             })
 
         })
@@ -126,11 +138,13 @@
             }
             if (wasInSearch) {
                 if (firstSearch) {
+                    $(".warning").addClass('fadeOutAnim')
                     $("#navbar").addClass('topNavbar')
                     setTimeout(() => {
                         $("#luggage").css('display', 'flex')
                         $("#main").addClass("luggageAppearAnim")
                         $("#hand").addClass("luggageAppearAnim")
+                        $(".warning").css("display", "none")
                     }, 1000)
                     firstSearch = false
                 }
@@ -181,17 +195,14 @@
 
 <body>
     <div id="infobar">
-        <div class="warning">
-            <img style="width: 50px"
-                src="https://p7.hiclipart.com/preview/97/794/538/tech-one-inc-computer-icons-website-shutterstock-information-icon-clip-art-at-clker-com-vector-clip-art-online.jpg" />
-
-        </div>
+        <div class="warning"></div>
     </div>
     <div id="siteBody">
 
 
         <div id="navbar">
-            <input onkeypress="handle(event)" id="search" type="text" placeholder="Nazwa przedmiotu..." />
+            <input onkeypress="handle(event)" id="search" type="text"
+                placeholder="Co chcesz umieścić w swoim bagażu?" />
             <img id="enter" onclick="sendEnteredPhrase()" src="https://static.thenounproject.com/png/620845-200.png" />
             <div id="socialMedias">
                 <a href="https://www.facebook.com/Packyourbag-109337594166249/?view_public_for=109337594166249"><img
@@ -203,32 +214,17 @@
         <div id="luggage">
             <div id="adLeft"></div>
             <div id="main">
-                <h1>Bagaż Główny
-                    <br>
-                    Rejestrowany
-                </h1>
+                <h1>Bagaż Główny / Rejestrowany</h1>
                 <img id="mainCheck" src="" />
-                <p id="mainInfo"><br /></p>
+                <p id="mainInfo"></p>
             </div>
             <div id="adMid"></div>
             <div id="hand">
-                <h1>Bagaż Podręczny
-                    <br />
-                    Kabinowy
-                </h1>
+                <h1>Bagaż Podręczny / Kabinowy</h1>
                 <img id="handCheck" src="" />
                 <p id="handInfo">Tylko w pojemnikach, do pojemności 100 ml</p>
             </div>
             <div id="adRight"></div>
-        </div>
-        <div id="footer">
-            <p>Powyższy wykaz ma charakter wyłącznie informacyjny i jego przeznaczeniem jest ułatwienie pasażerom
-                sprawnego
-                odbycia
-                podróży. Prosimy jednakże pamiętać, że operator kontroli bezpieczeństwa dokonuje samodzielnej decyzji o
-                dopuszczeniu
-                przedmiotu na pokład i pasażer ponosi odpowiedzialność za swoje mienie.</p>
-
         </div>
     </div>
 </body>
