@@ -5094,21 +5094,6 @@ exports.Data = {
         glowny:true,
         conditionally:true,
         en:"throat spray"
-<<<<<<< HEAD
-    },
-    "spray na alergie":{
-        podreczny:true,
-        glowny:true,
-        conditionally:true,
-        en:"allergy spray"
-    },
-    "leki medyczne w aerozolu":{
-        podreczny:true,
-        glowny:true,
-        conditionally:true,
-        en:"medical spray drugs"
-=======
->>>>>>> a84894f1b7e3a92346924f33e17bffe4bcb9618e
     },
     "lalka gumowa":{
         podreczny:true,
@@ -5601,6 +5586,5 @@ exports.Data = {
     "opaska na uszy":{
         podreczny:true,
         glowny:true,
-        en:"rubber doll"
     },
 }
