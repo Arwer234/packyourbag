@@ -2,7 +2,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-@media all and (max-width: 2000px) {
+@media all and (max-width: 3000px) {
     html {
         font-size: 20px;
     }
@@ -56,7 +56,7 @@ body{
     display:flex;
     position: absolute;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border-radius: 20px;
     height:10%;
@@ -66,7 +66,6 @@ body{
     box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
 }
 #socialMedias{
-    position: absolute;
     display:flex;
     justify-content: flex-end;
 }
@@ -112,6 +111,13 @@ body{
     border:1px solid black;
     text-align: center;
     
+}
+#flags{
+    display:flex;
+    justify-content: space-around;
+}
+#flags img{
+    width:4vh;
 }
 #footer{
     background-color:black;
