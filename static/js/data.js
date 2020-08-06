@@ -5094,6 +5094,7 @@ exports.Data = {
         glowny:true,
         conditionally:true,
         en:"throat spray"
+<<<<<<< HEAD
     },
     "spray na alergie":{
         podreczny:true,
@@ -5106,8 +5107,498 @@ exports.Data = {
         glowny:true,
         conditionally:true,
         en:"medical spray drugs"
+=======
+>>>>>>> a84894f1b7e3a92346924f33e17bffe4bcb9618e
     },
     "lalka gumowa":{
+        podreczny:true,
+        glowny:true,
+        en:"rubber doll"
+    },
+    "klej szkolny":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+        en:"allergy spray"
+    },
+    "klej typu superglue":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+        en:"medical spray drugs"
+    },
+    "klej typu butapren":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "klej do gumy":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "klej szewski":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "klej do protez":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "klej do zębów":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "klej typu corega do protez":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "klej różne rodzaje":{
+        podreczny:true,
+        glowny:true,
+        conditionally:true,
+    },
+    "obcinacz do paznokci":{
+        podreczny:true,
+        glowny:true,
+    },
+    "dowód osobisty":{
+        podreczny:true,
+        glowny:true,
+    },
+    "paszport":{
+        podreczny:true,
+        glowny:true,
+    },
+    "bilet lotniczy":{
+        podreczny:true,
+        glowny:true,
+    },
+    "karta pokładowa":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kartka papieru":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kartki papieru":{
+        podreczny:true,
+        glowny:true,
+    },
+    "gazeta":{
+        podreczny:true,
+        glowny:true,
+    },
+    "czasopismo":{
+        podreczny:true,
+        glowny:true,
+    },
+    "tygodnik":{
+        podreczny:true,
+        glowny:true,
+    },
+    "przewodnik":{
+        podreczny:true,
+        glowny:true,
+    },
+    "karta kredytowa":{
+        podreczny:true,
+        glowny:true,
+    },
+    "karta bankomatowa":{
+        podreczny:true,
+        glowny:true,
+    },
+    "pieniądze":{
+        podreczny:true,
+        glowny:true,
+    },
+    "banknoty":{
+        podreczny:true,
+        glowny:true,
+    },
+    "monety":{
+        podreczny:true,
+        glowny:true,
+    },
+    "guziki":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kwiaty róże":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kwiaty tulipany":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kwiaty goździki":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kwiaty ogrodowe":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kwiaty cięte":{
+        podreczny:true,
+        glowny:true,
+    },
+    "przejściówka do kontaktu":{
+        podreczny:true,
+        glowny:true,
+    },
+    "słuchawki":{
+        podreczny:true,
+        glowny:true,
+    },
+    "karta pamięci":{
+        podreczny:true,
+        glowny:true,
+    },
+    "gumki do włosów":{
+        podreczny:true,
+        glowny:true,
+    },
+    "spinki do włosów":{
+        podreczny:true,
+        glowny:true,
+    },
+    "klips do włosów":{
+        podreczny:true,
+        glowny:true,
+    },
+    "grzebień do włosów":{
+        podreczny:true,
+        glowny:true,
+    },
+    "szczotka do włosów":{
+        podreczny:true,
+        glowny:true,
+    },
+    "lusterko":{
+        podreczny:true,
+        glowny:true,
+    },
+    "biżuteria":{
+        podreczny:true,
+        glowny:true,
+    },
+    "nici do szycia":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kalendarz":{
+        podreczny:true,
+        glowny:true,
+    },
+    "woreczki śniadaniowe":{
+        podreczny:true,
+        glowny:true,
+    },
+    "plastry":{
+        podreczny:true,
+        glowny:true,
+    },
+    "chusteczki higieniczne":{
+        podreczny:true,
+        glowny:true,
+    },
+    "spinacze do prania":{
+        podreczny:true,
+        glowny:true,
+    },
+    "linijka":{
+        podreczny:true,
+        glowny:true,
+    },
+    "metr drewniany":{
+        podreczny:true,
+        glowny:true,
+    },
+    "metr krawiecki":{
+        podreczny:true,
+        glowny:true,
+    },
+    "gumka do mazania":{
+        podreczny:true,
+        glowny:true,
+    },
+    "temperówka":{
+        podreczny:true,
+        glowny:true,
+    },
+    "temperówka elektryczna":{
+        podreczny:true,
+        glowny:true,
+    },
+    "temperówka drewniana":{
+        podreczny:true,
+        glowny:true,
+    },
+    "temperówka metalowa":{
+        podreczny:true,
+        glowny:true,
+    },
+    "temperówka plastikowa":{
+        podreczny:true,
+        glowny:true,
+    },
+    "gumka krawiecka":{
+        podreczny:true,
+        glowny:true,
+    },
+    "gumka elastyczna":{
+        podreczny:true,
+        glowny:true,
+    },
+    "taśma LED":{
+        podreczny:true,
+        glowny:true,
+    },
+    "tabletki bez recepty":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kapsułki bez recepty":{
+        podreczny:true,
+        glowny:true,
+    },
+    "tabletki na recepte":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kapsułki na recepte":{
+        podreczny:true,
+        glowny:true,
+    },
+    "poduszka":{
+        podreczny:true,
+        glowny:true,
+    },
+    "poduszka Jasiek":{
+        podreczny:true,
+        glowny:true,
+    },
+    "poduszka podróżna":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kołdra różne rodzaje":{
+        podreczny:true,
+        glowny:true,
+    },
+    "poszewka na poduszkę":{
+        podreczny:true,
+        glowny:true,
+    },
+    "poszewka na kołdrę":{
+        podreczny:true,
+        glowny:true,
+    },
+    "pościel":{
+        podreczny:true,
+        glowny:true,
+    },
+    "prześcieradło z gumką":{
+        podreczny:true,
+        glowny:true,
+    },
+    "prześcieradło tradycyjne":{
+        podreczny:true,
+        glowny:true,
+    },
+    "prawo jazdy":{
+        podreczny:true,
+        glowny:true,
+    },
+    "dokumenty":{
+        podreczny:true,
+        glowny:true,
+    },
+    "legitymacja studencka":{
+        podreczny:true,
+        glowny:true,
+    },
+    "potwierdzenie rezerwacji":{
+        podreczny:true,
+        glowny:true,
+    },
+    "karta płatnicza":{
+        podreczny:true,
+        glowny:true,
+    },
+    "karta ubezpieczenia zdrowotnego":{
+        podreczny:true,
+        glowny:true,
+    },
+    "książeczka szczepień":{
+        podreczny:true,
+        glowny:true,
+    },
+    "buty trekkingowe":{
+        podreczny:true,
+        glowny:true,
+    },
+    "buty górskie":{
+        podreczny:true,
+        glowny:true,
+    },
+    "klapki kąpielowe":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kapcie":{
+        podreczny:true,
+        glowny:true,
+    },
+    "buty sportowe":{
+        podreczny:true,
+        glowny:true,
+    },
+    "sandały":{
+        podreczny:true,
+        glowny:true,
+    },
+    "buty eleganckie":{
+        podreczny:true,
+        glowny:true,
+    },
+    "buty lakierki":{
+        podreczny:true,
+        glowny:true,
+    },
+    "buty na wysokim obcasie":{
+        podreczny:true,
+        glowny:true,
+    },
+    "koszula z długim rękawem":{
+        podreczny:true,
+        glowny:true,
+    },
+    "koszula z krótkim rękawem":{
+        podreczny:true,
+        glowny:true,
+    },
+    "bielizna":{
+        podreczny:true,
+        glowny:true,
+    },
+    "ubrania sportowe":{
+        podreczny:true,
+        glowny:true,
+    },
+    "getry":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kalesony":{
+        podreczny:true,
+        glowny:true,
+    },
+    "eleganckie ubrania":{
+        podreczny:true,
+        glowny:true,
+    },
+    "garsonka":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kostium":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kurtka przeciwdeszczowa":{
+        podreczny:true,
+        glowny:true,
+    },
+    "dresy":{
+        podreczny:true,
+        glowny:true,
+    },
+    "strój kąpielowy":{
+        podreczny:true,
+        glowny:true,
+    },
+    "slipki":{
+        podreczny:true,
+        glowny:true,
+    },
+    "obiektyw do aparatu":{
+        podreczny:true,
+        glowny:true,
+    },
+    "kij do selfie":{
+        podreczny:true,
+        glowny:true,
+    },
+    "selfie stick":{
+        podreczny:true,
+        glowny:true,
+    },
+    "zagłówek":{
+        podreczny:true,
+        glowny:true,
+    },
+    "wsuwki":{
+        podreczny:true,
+        glowny:true,
+    },
+    "gumy do żucia":{
+        podreczny:true,
+        glowny:true,
+    },
+    "wiatraczek na baterie":{
+        podreczny:true,
+        glowny:true,
+    },
+    "wiatrak elektryczny":{
+        podreczny:true,
+        glowny:true,
+    },
+    "plastry na rany":{
+        podreczny:true,
+        glowny:true,
+    },
+    "plastry na otarcia":{
+        podreczny:true,
+        glowny:true,
+    },
+    "chusteczki antybakteryjne":{
+        podreczny:true,
+        glowny:true,
+    },
+    "tabletki do ssania":{
+        podreczny:true,
+        glowny:true,
+    },
+    "tabletki na chorobę lokomocyjną":{
+        podreczny:true,
+        glowny:true,
+    },
+    "śpiwór":{
+        podreczny:true,
+        glowny:true,
+    },
+    "karimata":{
+        podreczny:true,
+        glowny:true,
+    },
+    "menażka":{
+        podreczny:true,
+        glowny:true,
+    },
+    "bielizna termiczna":{
+        podreczny:true,
+        glowny:true,
+    },
+    "opaska na uszy":{
         podreczny:true,
         glowny:true,
         en:"rubber doll"
