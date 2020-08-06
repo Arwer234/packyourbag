@@ -2,6 +2,7 @@ Dokumenty -> packyourbag ->
 Shift + Prawy przycisk myszy -> 
 Otwórz tutaj PowerShell
 
+git pull master master
 git add *
 git commit -m "dodano wpisy 24.06"
 git push master
