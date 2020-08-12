@@ -103,7 +103,7 @@ body{
     text-align: center;
     border-radius:20px;
     align-items:center;
-    justify-content: space-between;
+    justify-content: space-around;
    
 }
 #ad{
@@ -260,4 +260,7 @@ h1{
 #handInfo, #mainInfo{
     font-weight: bold;
     font-size:1.9vw;
+}
+#mainInfo{
+    opacity:0;
 }
