@@ -24,6 +24,7 @@
         var mainTemp = ""
         var handTemp = ""
         var obj = {}
+        var language = "pl"
         $(document).ready(function () {
 
             $.ajax({
@@ -31,6 +32,7 @@
                 type: "POST",
                 success: function (data) {
                     obj = JSON.parse(data)
+                    console.log(obj)
                     areItemsReady = true
                     $("#search")
                         .autocomplete({
@@ -91,6 +93,25 @@
                 e.preventDefault()
                 sendEnteredPhrase()
             }
+        }
+        function changeToEng(){
+            console.log("klik")
+            $.ajax({
+                url: "/eng",
+                type: "POST",
+                success: function (data) {
+                    obj = JSON.parse(data)
+                    areItemsReady = true
+                    console.log(obj)
+                    $("#search")
+                        .autocomplete({
+                            source: Object.keys(obj)
+                        })
+                },
+                error: function (xhr, status, error) {
+                    console.log(xhr);
+                },
+            });
         }
         function sendEnteredPhrase() {
             if (areItemsReady) {
@@ -201,6 +222,10 @@
 
 
         <div id="navbar">
+            <div id = "flags">
+                <img src = "https://www.travlang.com/factbook/flags/pl-lgflag.gif"/>
+                <img onclick="changeToEng()" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/640px-Flag_of_the_United_Kingdom.svg.png"/>
+            </div>
             <input onkeypress="handle(event)" id="search" type="text"
                 placeholder="Co chcesz umieścić w swoim bagażu?" />
             <img id="enter" onclick="sendEnteredPhrase()" src="https://static.thenounproject.com/png/620845-200.png" />
