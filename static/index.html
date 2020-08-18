@@ -95,7 +95,7 @@
             }
         }
         function changeToEng(){
-            console.log("klik")
+            language = "eng"
             $.ajax({
                 url: "/eng",
                 type: "POST",
@@ -112,6 +112,48 @@
                     console.log(xhr);
                 },
             });
+            $("input").attr("placeholder","What do you want to put in your luggage?")
+            $(".warning").off("mouseover")
+            $(".warning").on("mouseover", function () {
+                $(this).removeClass("warningBackSlideAnim")
+                $(this).addClass("warningSlideAnim")
+                $(this).css("background-image", "none")
+                textAppearing = setTimeout(() => {
+                    $(this).text("The list is for information only and is intended to assist passengers in their travel. Please note that the inspection operator decides to allow the item on board and the passenger is responsible for their property.")
+                }, 1000)
+            })
+            $("#mainPrompt").text("Main Luggage")
+            $("#handPrompt").text("Hand Luggage")
+        }
+        changeToPl = () =>{
+            $.ajax({
+                url: "/getItemData",
+                type: "POST",
+                success: function (data) {
+                    obj = JSON.parse(data)
+                    areItemsReady = true
+                    console.log(obj)
+                    $("#search")
+                        .autocomplete({
+                            source: Object.keys(obj)
+                        })
+                },
+                error: function (xhr, status, error) {
+                    console.log(xhr);
+                },
+            });
+            $("input").attr("placeholder","Co chcesz umieścić w swoim bagażu?")
+            $(".warning").off("mouseover")
+            $(".warning").on("mouseover", function () {
+                $(this).removeClass("warningBackSlideAnim")
+                $(this).addClass("warningSlideAnim")
+                $(this).css("background-image", "none")
+                textAppearing = setTimeout(() => {
+                    $(this).text("Wykaz ma charakter wyłącznie informacyjny i jego przeznaczeniem jest ułatwienie pasażerom odbycia podróży. Prosimy pamiętać, że operator kontroli dokonuje decyzji o dopuszczeniu przedmiotu na pokład i pasażer ponosi odpowiedzialność za swoje mienie.")
+                }, 1000)
+            })
+            $("#mainPrompt").text("Bagaż Główny")
+            $("#handPrompt").text("Bagaż Podręczny")
         }
         function sendEnteredPhrase() {
             if (areItemsReady) {
@@ -196,7 +238,10 @@
                 else {
                     mainTemp = linkConditionally
                 }
-                document.getElementById("handInfo").innerText = "Tylko w pojemnikach 100ml"
+                if(language=="eng") $("#handInfo").text("Allowed only in 100ml containers")
+                else $("#handInfo").text("Tylko w pojemnikach do 100ml")
+                $("#mainInfo").text("Tylko w pojemnikach do 100ml")
+
             }
             else {
                 document.getElementById(type).style.backgroundColor = "rgba(255,0,0,0.7)"
@@ -219,11 +264,16 @@
         <div class="warning"></div>
     </div>
     <div id="siteBody">
-
+        <div class = "contextMenu">
+            <div class="headerElem">Wyszukiwarka</div>
+            <div class="headerElem">Kontrola bezpieczeństwa</div>
+            <div class="headerElem">Bagaż bez opieki</div>
+            <div class="headerElem">Przewóz broni</div>
+        </div>
 
         <div id="navbar">
             <div id = "flags">
-                <img src = "https://www.travlang.com/factbook/flags/pl-lgflag.gif"/>
+                <img onclick="changeToPl()" src = "https://www.travlang.com/factbook/flags/pl-lgflag.gif"/>
                 <img onclick="changeToEng()" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/640px-Flag_of_the_United_Kingdom.svg.png"/>
             </div>
             <input onkeypress="handle(event)" id="search" type="text"
@@ -239,13 +289,13 @@
         <div id="luggage">
             <div id="adLeft"></div>
             <div id="main">
-                <h1>Bagaż Główny / Rejestrowany</h1>
+                <h1 id = "mainPrompt">Bagaż Główny / Rejestrowany</h1>
                 <img id="mainCheck" src="" />
                 <p id="mainInfo"></p>
             </div>
             <div id="adMid"></div>
             <div id="hand">
-                <h1>Bagaż Podręczny / Kabinowy</h1>
+                <h1 id = "handPrompt">Bagaż Podręczny / Kabinowy</h1>
                 <img id="handCheck" src="" />
                 <p id="handInfo">Tylko w pojemnikach, do pojemności 100 ml</p>
             </div>
