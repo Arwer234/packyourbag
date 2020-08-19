@@ -61,17 +61,6 @@
                     console.log(xhr);
                 },
             });
-            $.ajax({
-                url: "https://localhost:3000/eng",
-                type: "POST",
-                success: function (data) {
-                    obj = JSON.parse(data)
-                    console.log(obj)
-                },
-                error: function (xhr, status, error) {
-                    console.log(xhr);
-                },
-            });
             var textAppearing
             $(".warning").on("mouseover", function () {
                 $(this).removeClass("warningBackSlideAnim")
@@ -312,6 +301,7 @@
             </div>
             <div id="adRight"></div>
         </div>
+        <div class="holder"></div>
     </div>
 </body>
 

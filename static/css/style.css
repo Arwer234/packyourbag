@@ -196,6 +196,7 @@ body{
     width:100vw;
     margin:0;
     padding:0;
+    justify-content: space-between;
 }
 .contextMenu{
     width:100%;
@@ -227,7 +228,7 @@ h1{
 
 @keyframes slide {
     100% {
-      top: 5%;
+      top: 12%;
     }
   
 }
