@@ -25,9 +25,21 @@ app.post('/eng',cors(),(req,res)=>{
         if(data[keys[i]].en!=undefined) {
             //enKeys.push(data[keys[i]].en)
             enKeys[data[keys[i]].en] = data[keys[i]]
-            enKeys[data[keys[i]].pl] = keys[i]
+            enKeys[data[keys[i]]].pl = keys[i]
         }
     }
     res.send(JSON.stringify(enKeys))
 })
+let data = JSON.parse(JSON.stringify(itemData['Data']))
+    let keys = Object.keys(data)
+    let enKeys = {}
+    for(let i = 0;i<keys.length;i++){
+        if(data[keys[i]].en!=undefined) {
+            //enKeys.push(data[keys[i]].en)
+            enKeys[data[keys[i]].en] = data[keys[i]]
+            enKeys[data[keys[i]].en].pl = keys[i]
+
+        }
+    }
+console.log(enKeys)
 app.listen(3000, () => console.log(`Example app listening at: ` + 3000))

@@ -5104,13 +5104,13 @@ exports.Data = {
         podreczny:true,
         glowny:true,
         conditionally:true,
-        en:"allergy spray"
+        en:"school glue"
     },
     "klej typu superglue":{
         podreczny:true,
         glowny:true,
         conditionally:true,
-        en:"medical spray drugs"
+        en:"superglue"
     },
     "klej typu butapren":{
         podreczny:true,
