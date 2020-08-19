@@ -25,6 +25,7 @@ app.post('/eng',cors(),(req,res)=>{
         if(data[keys[i]].en!=undefined) {
             //enKeys.push(data[keys[i]].en)
             enKeys[data[keys[i]].en] = data[keys[i]]
+            enKeys[data[keys[i]].pl] = keys[i]
         }
     }
     res.send(JSON.stringify(enKeys))
