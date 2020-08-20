@@ -11,7 +11,8 @@
     <link type="text/css" rel="stylesheet" href="/css/jquery-ui.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script data-ad-client="ca-pub-1538658242858314" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-1538658242858314" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link type="text/css" rel="stylesheet" href="/css/style.css">
     <style>
         .ui-autocomplete {
@@ -26,7 +27,27 @@
         var obj = {}
         var language = "pl"
         $(document).ready(function () {
+            $("a").on('click', function (event) {
 
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 0, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
             $.ajax({
                 url: "https://packyourbag.pl/getItemData",
                 type: "POST",
@@ -94,7 +115,7 @@
                 sendEnteredPhrase()
             }
         }
-        function changeToEng(){
+        function changeToEng() {
             language = "eng"
             $.ajax({
                 url: "/eng",
@@ -112,7 +133,7 @@
                     console.log(xhr);
                 },
             });
-            $("input").attr("placeholder","What do you want to put in your luggage?")
+            $("input").attr("placeholder", "What do you want to put in your luggage?")
             $(".warning").off("mouseover")
             $(".warning").on("mouseover", function () {
                 $(this).removeClass("warningBackSlideAnim")
@@ -125,7 +146,7 @@
             $("#mainPrompt").text("Main Luggage")
             $("#handPrompt").text("Hand Luggage")
         }
-        changeToPl = () =>{
+        changeToPl = () => {
             $.ajax({
                 url: "/getItemData",
                 type: "POST",
@@ -142,7 +163,7 @@
                     console.log(xhr);
                 },
             });
-            $("input").attr("placeholder","Co chcesz umieścić w swoim bagażu?")
+            $("input").attr("placeholder", "Co chcesz umieścić w swoim bagażu?")
             $(".warning").off("mouseover")
             $(".warning").on("mouseover", function () {
                 $(this).removeClass("warningBackSlideAnim")
@@ -238,7 +259,7 @@
                 else {
                     mainTemp = linkConditionally
                 }
-                if(language=="eng") $("#handInfo").text("Allowed only in 100ml containers")
+                if (language == "eng") $("#handInfo").text("Allowed only in 100ml containers")
                 else $("#handInfo").text("Tylko w pojemnikach do 100ml")
                 $("#mainInfo").text("Tylko w pojemnikach do 100ml")
 
@@ -260,48 +281,129 @@
 </head>
 
 <body>
-    <div id="infobar">
-        <div class="warning"></div>
-    </div>
-    <div id="siteBody">
-        <div class = "contextMenu">
-            <div class="headerElem">Wyszukiwarka</div>
-            <div class="headerElem">Kontrola bezpieczeństwa</div>
-            <div class="headerElem">Bagaż bez opieki</div>
-            <div class="headerElem">Przewóz broni</div>
-        </div>
+    <div id="mainBody">
 
-        <div id="navbar">
-            <div id = "flags">
-                <img onclick="changeToPl()" src = "https://www.travlang.com/factbook/flags/pl-lgflag.gif"/>
-                <img onclick="changeToEng()" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/640px-Flag_of_the_United_Kingdom.svg.png"/>
+        <div id="siteBody">
+            <div class="header">
+                <a href = "#siteBody" class="headerElem">Wyszukiwarka</a>
+                <a href="#security-control" class="headerElem">Kontrola bezpieczeństwa
+                </a>
+                <a href="#unattended-luggage" class="headerElem">Bagaż bez opieki
+                </a>
+                <a href="#gun-transport" class="headerElem">Przewóz broni</a>
             </div>
-            <input onkeypress="handle(event)" id="search" type="text"
-                placeholder="Co chcesz umieścić w swoim bagażu?" />
-            <img id="enter" onclick="sendEnteredPhrase()" src="https://static.thenounproject.com/png/620845-200.png" />
-            <div id="socialMedias">
-                <a href="https://www.facebook.com/Packyourbag-109337594166249/?view_public_for=109337594166249"><img
-                        src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" /></a>
-                <a href="https://twitter.com/PackYourBag2"><img
-                        src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-twitter-512.png" /></a>
+
+            <div id="navbar">
+                <div id="flags">
+                    <img onclick="changeToPl()" src="https://www.travlang.com/factbook/flags/pl-lgflag.gif" />
+                    <img onclick="changeToEng()"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/640px-Flag_of_the_United_Kingdom.svg.png" />
+                </div>
+                <input onkeypress="handle(event)" id="search" type="text"
+                    placeholder="Co chcesz umieścić w swoim bagażu?" />
+                <img id="enter" onclick="sendEnteredPhrase()"
+                    src="https://static.thenounproject.com/png/620845-200.png" />
+                <div id="socialMedias">
+                    <a href="https://www.facebook.com/Packyourbag-109337594166249/?view_public_for=109337594166249"><img
+                            src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" /></a>
+                    <a href="https://twitter.com/PackYourBag2"><img
+                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-twitter-512.png" /></a>
+                </div>
+            </div>
+            <div id="luggage">
+                <div id="adLeft"></div>
+                <div id="main">
+                    <h1 id="mainPrompt">Bagaż Główny / Rejestrowany</h1>
+                    <img id="mainCheck" src="" />
+                    <p id="mainInfo"></p>
+                </div>
+                <div id="adMid"></div>
+                <div id="hand">
+                    <h1 id="handPrompt">Bagaż Podręczny / Kabinowy</h1>
+                    <img id="handCheck" src="" />
+                    <p id="handInfo">Tylko w pojemnikach, do pojemności 100 ml</p>
+                </div>
+                <div id="adRight"></div>
+            </div>
+            <div class="holder"></div>
+        </div>
+        <div id="articleSection">
+            <div id="security-control" class="articleBody">
+                <h3 class="articleHeader">Kontrola bezpieczeństwa</h3>
+                <div class="articleContent">
+                    <div class="articleText">Bagaż podlega ograniczeniom, zarówno jeśli chodzi o wagę, rozmiar, jak i
+                        zawartość. Przewoźnik
+                        ma prawo do ustalenia własnych ograniczeń dotyczących np. liczby lub wielkości przewożonego
+                        bagażu.
+                        Nie wszystkie przedmioty mogą być transportowane
+                        drogą lotniczą. Niektóre z nich należy przewozić tylko
+                        w bagażu rejestrowanym, gdyż nie można ich wnieść
+                        na pokład samolotu w bagażu podręcznym. Lista
+                        przedmiotów dozwolonych oraz przedmiotów zabronionych do transportu drogą lotniczą, znajduje się
+                        na stronie internetowej Urzędu Lotnictwa Cywilnego
+                        (http://www.ulc.gov.pl) oraz na stronach przewodników turystycznych.
+                        W trakcie kontroli bezpieczeństwa bagażu podręcznego, przedmioty zabronione są usuwane do
+                        specjalnych pojemników. Jeśli zachodzą wątpliwości czy dany
+                        przedmiot możemy zabrać ze sobą, lepiej pozostawić
+                        go w domu lub nadać w bagażu rejestrowanym.
+                        Kontroli bezpieczeństwa na lotnisku poddawani są
+                        wszyscy pasażerowie w celu zapewnienia odpowiedniego poziomu ochrony i bezpieczeństwa w
+                        transporcie lotniczym. Polega ona na niedopuszczeniu
+                        do wniesienia na pokład samolotu przedmiotów
+                        niebezpiecznych, mogących stanowić zagrożenie
+                        w ruchu lotniczym.
+                        Pasażer jest dopuszczany do kontroli bezpieczeństwa po okazaniu karty pokładowej, czyli tzw.
+                        boarding`u, a czasami również, w zależności od wymogów firm dokonujących tej kontroli, dokumentu
+                        tożsamości: dowodu osobistego lub paszportu. </div>
+                    <img class="articleImage" src="https://krknews.pl/wp-content/uploads/2020/06/balice-1czerwca3.jpg" />
+                </div>
+            </div>
+            <div id = "unattended-luggage" class="articleBody">
+                <h3 class="articleHeader">Bagaż bez opieki</h3>
+                <div class="articleContent">
+                    <img class="articleImage" src="https://www.scti.com.au/-/media/project/scti/nz/images/travel-advice/unattended-luggage/unattended-baggage-airport-900x675.jpg" />
+                    <div class="articleText">Należy pamiętać, aby nigdy nie pozostawiać
+                        bagażu bez opieki. Każdy bagaż bez widocznego nadzoru, traktowany jest przez służby lotniskowe
+                        jako potencjalne zagrożenie, co wiąże
+                        się ze wszczęciem odpowiednich procedur
+                        bezpieczeństwa, takich jak ewakuacja portu
+                        i konieczność rozpoznania bagażu przez specjalistów pirotechników. Procedury te są czasochłonne
+                        i mogą mieć wpływ nawet na opóźnienia lotów.
+                        Nie należy brać od nieznajomych osób
+                        pakunków i bagażu o nieznanej zawartości.
+                        Należy odmawiać prośbom o „przewiezienie
+                        czegoś”. W przypadku spotkania się z podejrzaną propozycją, należy natychmiast powiadomić służby
+                        lotniskowe.
+                        W przypadku zauważenia bagażu lub innego
+                        przedmiotu/pakunku bez opieki natychmiast
+                        powiadomić właściwe służby odpowiedzialne
+                        za zapewnienie bezpieczeństwa i porządku
+                        publicznego na lotnisku.
+                        Pamiętać należy, że pozostawienie bagażu
+                        bez opieki może skutkować sankcjami karnymi.</div>
+                </div>
+            </div>
+            <div id = "gun-transport" class="articleBody">
+                <h3 class="articleHeader">Przewóz broni</h3>
+                <div class="articleContent">
+                    <div class="articleText">
+                        Osoba zamierzająca przewieźć broń palną, broń gazową lub amunicję jest obowiązana o tym fakcie
+                        poinformować przedstawiciela przewoźnika na lotnisku wylotu w celu
+                        zadeklarowania tego faktu. Pasażer przewożący broń palną i/lub amunicję poproszony jest o
+                        przejście do specjalnego pomieszczenia, celem sprawdzenia broni oraz
+                        posiadanych dokumentów (pozwolenie na broń, a w ruchu międzynarodowym – również zgodę na jej
+                        wywóz wydaną przez organ Policji lub zaświadczenie wydane przez Konsula
+                        RP oraz „Europejską Kartę Broni”).
+                        Należy zaznaczyć, że broń przewożona drogą lotniczą powinna być rozładowana i zabezpieczona, a
+                        amunicja zapakowana w sposób uniemożliwiający uderzenie w spłonkę naboju.
+                        Broń palną, broń gazową lub amunicję umieszcza się w bagażu rejestrowanym lub nadaje się jako
+                        bagaż rejestrowany, który jest transportowany na pokład statku powietrznego
+                        pod stałym nadzorem Straży Granicznej.
+                    </div>
+                    <img class="articleImage" src="https://f4fcdn.eu/wp-content/uploads/2017/11/BronLotnisko650ST.png" />
+                </div>
             </div>
         </div>
-        <div id="luggage">
-            <div id="adLeft"></div>
-            <div id="main">
-                <h1 id = "mainPrompt">Bagaż Główny / Rejestrowany</h1>
-                <img id="mainCheck" src="" />
-                <p id="mainInfo"></p>
-            </div>
-            <div id="adMid"></div>
-            <div id="hand">
-                <h1 id = "handPrompt">Bagaż Podręczny / Kabinowy</h1>
-                <img id="handCheck" src="" />
-                <p id="handInfo">Tylko w pojemnikach, do pojemności 100 ml</p>
-            </div>
-            <div id="adRight"></div>
-        </div>
-        <div class="holder"></div>
     </div>
 </body>
 
