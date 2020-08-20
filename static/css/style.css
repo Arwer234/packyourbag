@@ -11,20 +11,28 @@
     }
     #luggage{
         flex-direction: row;
-        justify-content: space-around;
     }
     #main,#hand{
         width:20vw;
         height:60vh;
     }
-    
+    .articleImage{
+        width:40%;
+        height:auto
+    }
+    .articleContent{
+        flex-direction: row;
+    }
+    .articleText{
+        margin:30px;
+    }
 }
 
 
 
 @media all and (max-width: 1200px) {
     html {
-        font-size: 10px;
+        font-size: 12px;
     }
     #enter{
         display:none;
@@ -41,6 +49,16 @@
         width:90vw;
         height:30vh;
         margin:1rem;
+    }
+    .articleContent{
+        flex-direction: column;
+    }
+    .articleImage{
+        width:90%;
+        height:auto
+    }
+    .articleText{
+        margin:10px;
     }
 }
 html{
@@ -101,14 +119,14 @@ body{
     display:none;
     width:100%;
     height:60vh;
+    padding-top:25vh;
 }
 #main,#hand{
     display:flex;
     flex-direction: column;
-    border:1px solid black;
+    box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
     flex:2;
     text-align: center;
-    border-radius:20px;
     align-items:center;
     justify-content: space-around;
    
@@ -234,20 +252,18 @@ body{
 .articleText{
     text-align:justify;
     font-size:0.9em;
-    margin:30px;
 }
 .articleHeader{
     font-size:1.2em;
 }
 .articleContent{
     display:flex;
-    flex-direction: row;
     justify-content: space-around;
 }
+
 .articleImage{
-    width:20%;
     box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
-    margin:30px;
+    margin:20px;
 }
 .headerElem{
     height:50%;
