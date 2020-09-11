@@ -34,12 +34,12 @@
                 "Bagaż podlega ograniczeniom, zarówno jeśli chodzi o wagę, rozmiar, jak i zawartość. Przewoźnik ma prawo do ustalenia własnych ograniczeń dotyczących np. liczby lub wielkości przewożonego bagażu. Nie wszystkie przedmioty mogą być transportowane drogą lotniczą. Niektóre z nich należy przewozić tylko w bagażu rejestrowanym, gdyż nie można ich wnieść na pokład samolotu w bagażu podręcznym. Lista przedmiotów dozwolonych oraz przedmiotów zabronionych do transportu drogą lotniczą, znajduje się w naszej wyszukiwarce. W trakcie kontroli bezpieczeństwa bagażu podręcznego, przedmioty zabronione są usuwane do specjalnych pojemników. Jeśli zachodzą wątpliwości czy dany przedmiot możemy zabrać ze sobą, lepiej pozostawić go w domu lub nadać w bagażu rejestrowanym. Kontroli bezpieczeństwa na lotnisku poddawani są wszyscy pasażerowie w celu zapewnienia odpowiedniego poziomu ochrony i bezpieczeństwa w transporcie lotniczym. Polega ona na niedopuszczeniu do wniesienia na pokład samolotu przedmiotów niebezpiecznych, mogących stanowić zagrożenie w ruchu lotniczym. Pasażer jest dopuszczany do kontroli bezpieczeństwa po okazaniu karty pokładowej, czyli tzw. boarding`u, a czasami również, w zależności od wymogów firm dokonujących tej kontroli, dokumentu tożsamości: dowodu osobistego lub paszportu. "
                 ],
             "unattended-luggage":[
-                "Remember never to leave your luggage unattended. Any luggage without visible supervision is treated by airport services as a potential threat, which is associated with the initiation of appropriate security procedures, such as evacuation of the port and the need to recognize the luggage by pyrotechnic specialists. These procedures are time consuming and can even result in flight delays. Packages and luggage of unknown contents should not be taken from strangers. Requests to 'carry something' should be denied. If you encounter a suspicious proposal, notify the airport services immediately. If you notice luggage or any other item / package unattended, immediately notify the appropriate services responsible for ensuring safety and public order at the airport. There is a 500 PLN fine for leaving the luggage unattended.",
+                "Remember to not leave your luggage unattended. Any luggage without visible supervision is treated by airport services as a potential threat, which is associated with the initiation of appropriate security procedures, such as evacuation of the port and the need to recognize the luggage by pyrotechnic specialists. These procedures are time consuming and can even result in flight delays. Packages and luggage of unknown contents should not be taken from strangers. Requests to 'carry something' should be denied. If you encounter a suspicious proposal, notify the airport services immediately. If you notice luggage or any other item / package unattended, immediately notify the appropriate services responsible for ensuring safety and public order at the airport. There is a 500 PLN fine for leaving the luggage unattended.",
                 "Należy pamiętać, aby nigdy nie pozostawiać bagażu bez opieki. Każdy bagaż bez widocznego nadzoru, traktowany jest przez służby lotniskowe jako potencjalne zagrożenie, co wiąże się ze wszczęciem odpowiednich procedur bezpieczeństwa, takich jak ewakuacja portu i konieczność rozpoznania bagażu przez specjalistów pirotechników. Procedury te są czasochłonne i mogą mieć wpływ nawet na opóźnienia lotów. Nie należy brać od nieznajomych osób pakunków i bagażu o nieznanej zawartości. Należy odmawiać prośbom o „przewiezienie czegoś”. W przypadku spotkania się z podejrzaną propozycją, należy natychmiast powiadomić służby lotniskowe. W przypadku zauważenia bagażu lub innego przedmiotu/pakunku bez opieki natychmiast powiadomić właściwe służby odpowiedzialne za zapewnienie bezpieczeństwa i porządku publicznego na lotnisku. Pozostawienie bagażu bez opieki jest karane mandatem karnym do 500 zł. "
                 ],
         }
         var headerTranslation = [
-            ["Search Bar","Wyszukiwarka"]
+            ["Search Bar","Wyszukiwarka"],
             ["Security Control", "Kontrola bezpieczeństwa"],
             ["Unattended Luggage", "Bagaż bez opieki"],
             ["Gun Transport", "Przewóz broni"]
@@ -168,7 +168,9 @@
             $("#gun-transport-text").text(textTranslations["gun-transport"][0])
             $("#security-control-text").text(textTranslations["security-control"][0])
             for(let i = 0;i<4;i++){
-                $(".headerElem")[i].innerText = headerTranslation[i][0]
+                console.log($(".articleHeader")[i])
+                $(".headerElem")[i].text = headerTranslation[i][0]
+                if(i!=0) $(".articleHeader")[i-1].innerText = headerTranslation[i][0]
             }
         }
         changeToPl = () => {
@@ -203,6 +205,11 @@
             $("#unattended-luggage-text").text(textTranslations["unattended-luggage"][1])
             $("#gun-transport-text").text(textTranslations["gun-transport"][1])
             $("#security-control-text").text(textTranslations["security-control"][1])
+            for(let i = 0;i<4;i++){
+                console.log($(".articleHeader")[i])
+                $(".headerElem")[i].text = headerTranslation[i][1]
+                if(i!=0) $(".articleHeader")[i-1].innerText = headerTranslation[i][1]
+            }
         }
         function sendEnteredPhrase() {
             if (areItemsReady) {

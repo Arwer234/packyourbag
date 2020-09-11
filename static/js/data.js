@@ -5112,479 +5112,542 @@ exports.Data = {
         conditionally:true,
         en:"superglue"
     },
-    "klej typu butapren":{
-        podreczny:true,
-        glowny:true,
-        conditionally:true,
-    },
     "klej do gumy":{
         podreczny:true,
         glowny:true,
         conditionally:true,
+        en:"glue for rubber"
     },
     "klej szewski":{
         podreczny:true,
         glowny:true,
         conditionally:true,
+        en:"shoe glue"
     },
     "klej do protez":{
         podreczny:true,
         glowny:true,
         conditionally:true,
-    },
-    "klej do zębów":{
-        podreczny:true,
-        glowny:true,
-        conditionally:true,
-    },
-    "klej typu corega do protez":{
-        podreczny:true,
-        glowny:true,
-        conditionally:true,
+        en:"denture adhesive"
     },
     "klej różne rodzaje":{
         podreczny:true,
         glowny:true,
         conditionally:true,
     },
-    "obcinacz do paznokci":{
-        podreczny:true,
-        glowny:true,
-    },
     "dowód osobisty":{
         podreczny:true,
         glowny:true,
+        en:"personal id"
     },
     "paszport":{
         podreczny:true,
         glowny:true,
+        en:"passport"
     },
     "bilet lotniczy":{
         podreczny:true,
         glowny:true,
+        en:"flight ticket"
     },
     "karta pokładowa":{
         podreczny:true,
         glowny:true,
+        en:"boarding pass"
     },
     "kartka papieru":{
         podreczny:true,
         glowny:true,
+        en:"sheet of paper"
     },
     "kartki papieru":{
         podreczny:true,
         glowny:true,
+        en:"sheets of paper"
     },
     "gazeta":{
         podreczny:true,
         glowny:true,
+        en:"newspaper"
     },
     "czasopismo":{
         podreczny:true,
         glowny:true,
+        en:"journal"
     },
     "tygodnik":{
         podreczny:true,
         glowny:true,
+        en:"weekly"
     },
     "przewodnik":{
         podreczny:true,
         glowny:true,
+        en:"tourist guide"
     },
     "karta kredytowa":{
         podreczny:true,
         glowny:true,
-    },
-    "karta bankomatowa":{
-        podreczny:true,
-        glowny:true,
+        en:"credit card"
     },
     "pieniądze":{
         podreczny:true,
         glowny:true,
+        en:"money"
     },
     "banknoty":{
         podreczny:true,
         glowny:true,
+        en:"banknotes"
     },
     "monety":{
         podreczny:true,
         glowny:true,
+        en:"coin"
     },
     "guziki":{
         podreczny:true,
         glowny:true,
+        en:"buttons"
     },
     "kwiaty róże":{
         podreczny:true,
         glowny:true,
+        en:"roses"
     },
     "kwiaty tulipany":{
         podreczny:true,
         glowny:true,
+        en:"tulips"
     },
     "kwiaty goździki":{
         podreczny:true,
         glowny:true,
+        en:"carnations"
     },
-    "kwiaty ogrodowe":{
+    "kwiaty":{
         podreczny:true,
         glowny:true,
-    },
-    "kwiaty cięte":{
-        podreczny:true,
-        glowny:true,
+        en:"flowers"
     },
     "przejściówka do kontaktu":{
         podreczny:true,
         glowny:true,
+        en:"socket adapter"
     },
     "słuchawki":{
         podreczny:true,
         glowny:true,
+        en:"headphones"
     },
     "karta pamięci":{
         podreczny:true,
         glowny:true,
+        en:"memory card"
     },
     "gumki do włosów":{
         podreczny:true,
         glowny:true,
+        en:"elastic band for hair"
     },
     "spinki do włosów":{
         podreczny:true,
         glowny:true,
+        en:"hair clips"
     },
     "klips do włosów":{
         podreczny:true,
         glowny:true,
+        en:"hair clip"
     },
     "grzebień do włosów":{
         podreczny:true,
         glowny:true,
+        en:"coomb"
     },
     "szczotka do włosów":{
         podreczny:true,
         glowny:true,
+        en:"hairbrush"
     },
     "lusterko":{
         podreczny:true,
         glowny:true,
+        en:"mirror"
     },
     "biżuteria":{
         podreczny:true,
         glowny:true,
+        en:"jewellry"
     },
     "nici do szycia":{
         podreczny:true,
         glowny:true,
+        en:"sewing thread"
     },
     "kalendarz":{
         podreczny:true,
         glowny:true,
+        en:"calendar"
     },
     "woreczki śniadaniowe":{
         podreczny:true,
         glowny:true,
+        en:"plastic bag"
     },
     "plastry":{
         podreczny:true,
         glowny:true,
+        en:"patches"
     },
     "chusteczki higieniczne":{
         podreczny:true,
         glowny:true,
+        en:"tissues"
     },
     "spinacze do prania":{
         podreczny:true,
         glowny:true,
+        en:"clips"
     },
     "linijka":{
         podreczny:true,
         glowny:true,
+        en:"ruler"
     },
     "metr drewniany":{
         podreczny:true,
         glowny:true,
+        en:"wooden metre measure"
     },
     "metr krawiecki":{
         podreczny:true,
         glowny:true,
+        en:"tailor centimeter"
     },
     "gumka do mazania":{
         podreczny:true,
         glowny:true,
+        en:"eraser"
     },
     "temperówka":{
         podreczny:true,
         glowny:true,
+        en:"pencil sharpener"
     },
     "temperówka elektryczna":{
         podreczny:true,
         glowny:true,
+        en:"electric pencil sharpener"
     },
     "temperówka drewniana":{
         podreczny:true,
         glowny:true,
+        en:"wooden pencil sharpener"
     },
     "temperówka metalowa":{
         podreczny:true,
         glowny:true,
+        en:"metal pencil sharpener"
     },
     "temperówka plastikowa":{
         podreczny:true,
         glowny:true,
+        en:"plastic pencil sharpener"
     },
     "gumka krawiecka":{
         podreczny:true,
         glowny:true,
+        en:"tailor band"
     },
     "gumka elastyczna":{
         podreczny:true,
         glowny:true,
+        en:"elastic band"
     },
     "taśma LED":{
         podreczny:true,
         glowny:true,
+        en:"LED strip"
     },
     "tabletki bez recepty":{
         podreczny:true,
         glowny:true,
+        en:"over-the-counter medications"
     },
     "kapsułki bez recepty":{
         podreczny:true,
         glowny:true,
+        en:"over-the-counter capsules"
     },
     "tabletki na recepte":{
         podreczny:true,
         glowny:true,
+        en:"prescription medications"
     },
     "kapsułki na recepte":{
         podreczny:true,
         glowny:true,
+        en:"prescription capsules"
     },
     "poduszka":{
         podreczny:true,
         glowny:true,
-    },
-    "poduszka Jasiek":{
-        podreczny:true,
-        glowny:true,
+        en:"pillow"
     },
     "poduszka podróżna":{
         podreczny:true,
         glowny:true,
+        en:"travel neck pillow"
     },
     "kołdra różne rodzaje":{
         podreczny:true,
         glowny:true,
+        en:"quilt"
     },
     "poszewka na poduszkę":{
         podreczny:true,
         glowny:true,
-    },
-    "poszewka na kołdrę":{
-        podreczny:true,
-        glowny:true,
+        en:"pillow case"
     },
     "pościel":{
         podreczny:true,
         glowny:true,
+        en:"sheets"
     },
     "prześcieradło z gumką":{
         podreczny:true,
         glowny:true,
+        en:"sheet with elastic"
     },
     "prześcieradło tradycyjne":{
         podreczny:true,
         glowny:true,
+        en:"classic sheet"
     },
     "prawo jazdy":{
         podreczny:true,
         glowny:true,
+        en:"driving licence"
     },
     "dokumenty":{
         podreczny:true,
         glowny:true,
+        en:"documents"
     },
     "legitymacja studencka":{
         podreczny:true,
         glowny:true,
+        en:"student id"
     },
     "potwierdzenie rezerwacji":{
         podreczny:true,
         glowny:true,
+        en:"booking confirmation"
     },
     "karta płatnicza":{
         podreczny:true,
         glowny:true,
+        en:"payment card"
     },
     "karta ubezpieczenia zdrowotnego":{
         podreczny:true,
         glowny:true,
+        en:"healt insurance card"
     },
     "książeczka szczepień":{
         podreczny:true,
         glowny:true,
+        en:"record book"
     },
     "buty trekkingowe":{
         podreczny:true,
         glowny:true,
+        en:"trekking shoes"
     },
     "buty górskie":{
         podreczny:true,
         glowny:true,
+        en:"hiking boots"
     },
     "klapki kąpielowe":{
         podreczny:true,
         glowny:true,
+        en:"slides"
     },
     "kapcie":{
         podreczny:true,
         glowny:true,
+        en:"slippers"
     },
     "buty sportowe":{
         podreczny:true,
         glowny:true,
+        en:"sport shoes"
     },
     "sandały":{
         podreczny:true,
         glowny:true,
+        en:"sandals"
     },
     "buty eleganckie":{
         podreczny:true,
         glowny:true,
+        en:"elegant shoes"
     },
     "buty lakierki":{
         podreczny:true,
         glowny:true,
+        en:"shone shoes"
     },
     "buty na wysokim obcasie":{
         podreczny:true,
         glowny:true,
+        en:"high-heels"
     },
     "koszula z długim rękawem":{
         podreczny:true,
         glowny:true,
+        en:"long-sleeved shirt"
     },
     "koszula z krótkim rękawem":{
         podreczny:true,
         glowny:true,
+        en:"short-sleeved shirt"
     },
     "bielizna":{
         podreczny:true,
         glowny:true,
+        en:"underwear"
     },
     "ubrania sportowe":{
         podreczny:true,
         glowny:true,
+        en:"sport clothing"
     },
     "getry":{
         podreczny:true,
         glowny:true,
+        en:"leggins"
     },
     "kalesony":{
         podreczny:true,
         glowny:true,
+        en:"long johns"
     },
     "eleganckie ubrania":{
         podreczny:true,
         glowny:true,
+        en:"elegant clothing"
     },
     "garsonka":{
         podreczny:true,
         glowny:true,
+        en:"suit"
     },
     "kostium":{
         podreczny:true,
         glowny:true,
+        en:"costume"
     },
     "kurtka przeciwdeszczowa":{
         podreczny:true,
         glowny:true,
+        en:"raincoat"
     },
     "dresy":{
         podreczny:true,
         glowny:true,
+        en:"sweatpants"
     },
     "strój kąpielowy":{
         podreczny:true,
         glowny:true,
+        en:"swimsuit"
     },
     "slipki":{
         podreczny:true,
         glowny:true,
+        en:"briefs"
     },
     "obiektyw do aparatu":{
         podreczny:true,
         glowny:true,
+        en:"camera lens"
     },
     "kij do selfie":{
         podreczny:true,
         glowny:true,
-    },
-    "selfie stick":{
-        podreczny:true,
-        glowny:true,
+        en:"selfie stick"
     },
     "zagłówek":{
         podreczny:true,
         glowny:true,
+        en:"headrest"
     },
     "wsuwki":{
         podreczny:true,
         glowny:true,
+        en:"bobby pin"
     },
     "gumy do żucia":{
         podreczny:true,
         glowny:true,
+        en:"chewing gum"
     },
     "wiatraczek na baterie":{
         podreczny:true,
         glowny:true,
+        en:"battery fan"
     },
     "wiatrak elektryczny":{
         podreczny:true,
         glowny:true,
-    },
-    "plastry na rany":{
-        podreczny:true,
-        glowny:true,
+        en:"electric fan"
     },
     "plastry na otarcia":{
         podreczny:true,
         glowny:true,
+        en:"dressings for excoriations"
     },
     "chusteczki antybakteryjne":{
         podreczny:true,
         glowny:true,
+        en:"antibacterial tissues"
     },
     "tabletki do ssania":{
         podreczny:true,
         glowny:true,
+        en:"chewable pills"
     },
     "tabletki na chorobę lokomocyjną":{
         podreczny:true,
         glowny:true,
+        en:"travel sickness pills"
     },
     "śpiwór":{
         podreczny:true,
         glowny:true,
+        en:"sleeping bag"
     },
     "karimata":{
         podreczny:true,
         glowny:true,
+        en:"carrimat"
     },
     "menażka":{
         podreczny:true,
         glowny:true,
+        en:"canteen"
     },
     "bielizna termiczna":{
         podreczny:true,
         glowny:true,
+        en:"thermal underwear"
     },
     "opaska na uszy":{
         podreczny:true,
         glowny:true,
+        en:"ear band"
     },
 }
