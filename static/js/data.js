@@ -1641,7 +1641,8 @@ exports.Data = {
         podreczny:true,
         glowny:true,
         conditionally:true,
-        en:"water"
+        en:"water",
+        image:"water.jpeg"
     },
     "buty damskie szpilki":{
         podreczny:true,

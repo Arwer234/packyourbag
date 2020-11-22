@@ -166,7 +166,7 @@ body{
     width:12vw;
     max-width:300px;
 }
-#adLeft,#adMid,#adRight{
+#adLeft,#luggageImage,#adRight{
     display:flex;
     flex:1;
 }
@@ -261,7 +261,7 @@ body{
     justify-content: space-around;
 }
 
-.articleImage{
+.articleImage, #luggageImage{
     box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
     margin:20px;
 }

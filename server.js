@@ -3,7 +3,11 @@ var app = express();
 var cors = require('cors')
 var http = require('http').createServer(app);
 var itemData = require("./static/js/data")
+var bodyParser = require('body-parser');
+
 app.use(express.static(__dirname + '/static'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -28,5 +32,9 @@ app.post('/eng',cors(),(req,res)=>{
         }
     }
     res.send(JSON.stringify(enKeys))
+})
+app.post('/images',(req,res)=>{
+    console.log(itemData['Data'][req.body.image].image.replace("\"","").split(".")[1])
+    res.send(JSON.stringify({extension:itemData['Data'][req.body.image].image.replace("\"","").split(".")[1]}))
 })
 app.listen(3000, () => console.log(`Example app listening at: ` + 3000))
