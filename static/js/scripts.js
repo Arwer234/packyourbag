@@ -23,26 +23,17 @@ var headerTranslation = [
 ]
 var language = "pl"
 $(document).ready(function () {
+    $("#mainBody").addClass("blur")
     $("a").on('click', function (event) {
-
-        // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
-            // Prevent default anchor click behavior
             event.preventDefault();
-
-            // Store hash
             var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
             }, 0, function () {
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
             });
-        } // End if
+        }
     });
     $.ajax({
         url: "https://packyourbag.pl/getItemData",
@@ -95,7 +86,13 @@ $(document).ready(function () {
         $(this).css("background-image", "url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/OOjs_UI_icon_info.svg/1200px-OOjs_UI_icon_info.svg.png)")
 
     })
-
+    $("#overlayButton").click(()=>{
+        $("#overlay").addClass("overlayDisappear")
+        setTimeout(()=>{
+            $("#mainBody").removeClass("blur")
+            $("#overlay").css("display","none")
+        },500)
+    })
 
 })
 function getImageExtension(name) {
@@ -213,14 +210,19 @@ async function sendEnteredPhrase() {
         
         if (firstSearch) {
             checkIfBanned(enteredPhrase)
-            $("#luggageImage").attr("src","gfx/itemImages/" + enteredPhrase + "." + imageExtension)
+            if(imageExtension!="none"){$("#luggageImage").attr("src","gfx/itemImages/" + enteredPhrase + "." + imageExtension)
+            $("#luggageImage").addClass("luggageAppearAnim")}
         }
         else {
             $("#main").addClass("colorChangeAnim")
             $("#hand").addClass("colorChangeAnim")
             setTimeout(() => {
                 checkIfBanned(enteredPhrase)
-                $("#luggageImage").attr("src","gfx/itemImages/" + enteredPhrase + "." + imageExtension)
+                if(imageExtension!="none"){
+                    $("#luggageImage").attr("src","gfx/itemImages/" + enteredPhrase + "." + imageExtension)
+                $("#luggageImage").addClass("luggageAppearAnim")
+                }
+                
             }, 500)
             setTimeout(() => {
                 $("#main").removeClass("colorChangeAnim").removeClass("luggageAppearAnim")
