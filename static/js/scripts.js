@@ -40,7 +40,6 @@ $(document).ready(function () {
         type: "POST",
         success: function (data) {
             obj = JSON.parse(data)
-            console.log(obj)
             areItemsReady = true
             $("#search")
                 .autocomplete({
@@ -132,7 +131,6 @@ function changeToEng() {
         success: function (data) {
             obj = JSON.parse(data)
             areItemsReady = true
-            console.log(obj)
             $("#search")
                 .autocomplete({
                     source: Object.keys(obj)
@@ -158,7 +156,6 @@ function changeToEng() {
     $("#gun-transport-text").text(textTranslations["gun-transport"][0])
     $("#security-control-text").text(textTranslations["security-control"][0])
     for (let i = 0; i < 4; i++) {
-        console.log($(".articleHeader")[i])
         $(".headerElem")[i].text = headerTranslation[i][0]
         if (i != 0) $(".articleHeader")[i - 1].innerText = headerTranslation[i][0]
     }
@@ -170,7 +167,6 @@ changeToPl = () => {
         success: function (data) {
             obj = JSON.parse(data)
             areItemsReady = true
-            console.log(obj)
             $("#search")
                 .autocomplete({
                     source: Object.keys(obj)
@@ -196,7 +192,6 @@ changeToPl = () => {
     $("#gun-transport-text").text(textTranslations["gun-transport"][1])
     $("#security-control-text").text(textTranslations["security-control"][1])
     for (let i = 0; i < 4; i++) {
-        console.log($(".articleHeader")[i])
         $(".headerElem")[i].text = headerTranslation[i][1]
         if (i != 0) $(".articleHeader")[i - 1].innerText = headerTranslation[i][1]
     }
@@ -205,7 +200,6 @@ async function sendEnteredPhrase() {
     var enteredPhrase = document.getElementById("search").value
     var imageExtension = await getImageExtension(enteredPhrase)
     imageExtension = JSON.parse(imageExtension).extension
-    console.log(imageExtension)
     if (areItemsReady) {
         
         if (firstSearch) {
