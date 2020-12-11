@@ -35,7 +35,7 @@ app.post('/eng',cors(),(req,res)=>{
 })
 app.post('/images',(req,res)=>{
     console.log(itemData['Data'][req.body.image].image.replace("\"","").split(".")[1])
-    if(itemData['Data'][req.body.image].image.replace("\"","").split(".")[1]!=undefined) res.send(JSON.stringify({extension:itemData['Data'][req.body.image].image.replace("\"","").split(".")[1]}))
+    if(itemData['Data'][req.body.image]!=undefined) res.send(JSON.stringify({extension:itemData['Data'][req.body.image].image.replace("\"","").split(".")[1]}))
     else res.send(JSON.stringify({extension:"none"}))
 })
 app.listen(3000, () => console.log(`Example app listening at: ` + 3000))
