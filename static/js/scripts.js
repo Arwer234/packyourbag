@@ -204,8 +204,13 @@ async function sendEnteredPhrase() {
         
         if (firstSearch) {
             checkIfBanned(enteredPhrase)
-            if(imageExtension!="none"){$("#luggageImage").attr("src","gfx/itemImages/" + enteredPhrase + "." + imageExtension)
-            $("#luggageImage").addClass("luggageAppearAnim")}
+            if(imageExtension!="none"){
+                $("#luggageImage").attr("src","gfx/itemImages/" + enteredPhrase + "." + imageExtension)
+                $("#luggageImage").addClass("luggageAppearAnim")
+            }
+            else{
+                $("#luggageImage").attr("src","gfx/default-image.jpg")
+            }
         }
         else {
             $("#main").addClass("colorChangeAnim")
@@ -214,7 +219,10 @@ async function sendEnteredPhrase() {
                 checkIfBanned(enteredPhrase)
                 if(imageExtension!="none"){
                     $("#luggageImage").attr("src","gfx/itemImages/" + enteredPhrase + "." + imageExtension)
-                $("#luggageImage").addClass("luggageAppearAnim")
+                    $("#luggageImage").addClass("luggageAppearAnim")
+                }
+                else{
+                    $("#luggageImage").attr("src","gfx/default-image.jpg")
                 }
                 
             }, 500)
