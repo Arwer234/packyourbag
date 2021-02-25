@@ -96,7 +96,7 @@ $(document).ready(function () {
 })
 function getImageExtension(name) {
     return $.ajax({
-        url: "http://localhost:3000/images",
+        url: "https://packyourbag.pl/images",
         type: "POST",
         data: {
             "image": name
