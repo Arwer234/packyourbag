@@ -2,7 +2,8 @@ exports.Data = {
     "nóż":{
         podreczny:false,
         glowny:true,
-        en:"knife"
+        en:"knife",
+        image:"knife.jpg"
     },
     "narkotyki":{
         podreczny:false,
