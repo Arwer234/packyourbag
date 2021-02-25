@@ -3,154 +3,183 @@ exports.Data = {
         podreczny:false,
         glowny:true,
         en:"knife",
-        image:"knife.jpg"
+        image:"nóż.jpg"
     },
     "narkotyki":{
         podreczny:false,
         glowny:false,
-        en:"drugs (illegal)"
+        en:"drugs (illegal)",
+        image:"narkotyki.jpg"
     },
     "granat":{
         podreczny:false,
         glowny:false,
-        en:"grenade"
+        en:"grenade",
+        image:"granat.jpg"
     },
     "granat dymny":{
         podreczny:false,
         glowny:false,
-        en:"smoke grenade"
+        en:"smoke grenade",
+        image:"granat dymny.jpg"
     },
     "naboje dymne":{
         podreczny:false,
         glowny:false,
-        en:"smoke canisters"
+        en:"smoke ammunitions",
+        image:"bullets.jpg"
     },
     "pociski dymne":{
         podreczny:false,
         glowny:false,
-        en:"smoke ammo"
+        en:"smoke ammunitions",
+        image:"bullets.jpg"
     },
     "pociski wszystkie rodzaje":{
         podreczny:false,
         glowny:false,
-        en:"ammunitions"
+        en:"ammunitions",
+        image:"bullets.jpg"
     },
     "amunicja do broni gładkolufowej":{
         podreczny:false,
         glowny:false,
-        en:"smoothbore ammo"
-
+        en:"smoothbore ammo",
+        image:"bullets.jpg"
     },
     "naboje kulowe":{
         podreczny:false,
         glowny:false,
-        en:"bullets"
+        en:"bullets",
+        image:"bullets.jpg"
     },
     "materiały pirotechniczne":{
         podreczny:false,
         glowny:false,
-        en:"explosives"
+        en:"explosives",
+        image:"materiały pirotechniczne.jpg"
     },
     "t-shirt":{
         podreczny:true,
         glowny:true,
-        en:"t-shirt"
+        en:"t-shirt",
+        image:"t-shirt.png"
     },
     "spodnie":{
         podreczny:true,
         glowny:true,
-        en:"trousers"
+        en:"trousers",
+        image:"spodnie.jpg"
     },
     "spodenki":{
         podreczny:true,
         glowny:true,
-        en:"shorts"
+        en:"shorts",
+        image:"spodenki.jpg"
     },
     "gacie":{
         podreczny:true,
         glowny:true,
-        en:"pants"
+        en:"boxers",
+        image:"gacie.jpg"
     },
     "skarpetki":{
         podreczny:true,
         glowny:true,
-        en:"socks"
+        en:"socks",
+        image:"skarpetki.jpg"
     },
     "pończochy":{
         podreczny:true,
         glowny:true,
-        en:"stockings"
+        en:"stockings",
+        image:"pończochy.jpg"
     },
     "rajstopy":{
         podreczny:true,
         glowny:true,
-        en:"tights"
+        en:"tights",
+        image:"rajstopy.jpg"
     },
     "koszulka":{
         podreczny:true,
         glowny:true,
+        image:"koszulka.jpg"
     },
     "podkoszulka":{
         podreczny:true,
         glowny:true,
+        image:"podkoszulka.jpg"
     },
     "tshirt":{
         podreczny:true,
         glowny:true,
+        image:"tshirt.jpg"
     },
     "kurtka":{
         podreczny:true,
         glowny:true,
-        en:"jacket"
+        en:"jacket",
+        image:"kurtka.jpg"
     },
     "płaszcz":{
         podreczny:true,
         glowny:true,
-        en:"coat"
+        en:"coat",
+        image:"płaszcz.jpg"
     },
     "czapka":{
         podreczny:true,
         glowny:true,
-        en:"cap"
+        en:"cap",
+        image:"cap.jpg"
     },
     "rękawiczki":{
         podreczny:true,
         glowny:true,
-        en:"gloves"
+        en:"gloves",
+        image:"rękawiczki.jpg"
     },
     "pasek":{
         podreczny:true,
         glowny:true,
-        en:"belt"
+        en:"belt",
+        image:"pasek.jpg"
     },
     "pas":{
         podreczny:true,
         glowny:true,
+        image:"pas.jpg"
     },
     "kamizelka":{
         podreczny:true,
         glowny:true,
-        en:"waistcoat"
+        en:"waistcoat",
+        image:"kamizelka.jpg"
     },
     "garnitur":{
         podreczny:true,
         glowny:true,
-        en:"suit"
+        en:"suit",
+        image:"garnitur.jpg"
     },
     "buty":{
         podreczny:true,
         glowny:true,
-        en:"shoes"
+        en:"shoes",
+        image:"buty.png"
     },
     "półbuty":{
         podreczny:true,
         glowny:true,
-        en:"shoes"
+        en:"shoes",
+        image:"półbuty.jpg"
     },
     "półbuty męskie":{
         podreczny:true,
         glowny:true,
-        en:"men's shoes"
+        en:"men's shoes",
+        image:"półbuty męskie.jpg"
     },
     "półbuty damskie":{
         podreczny:true,
@@ -160,27 +189,32 @@ exports.Data = {
     "buty na szpilkach":{
         podreczny:true,
         glowny:true,
-        en:"high-heeled shoes"
+        en:"high-heeled shoes",
+        image:"buty na szpilkach.jpg"
     },
     "kalosze":{
         podreczny:true,
         glowny:true,
-        en:"wellingtons"
+        en:"wellingtons",
+        image:"kalosze.jpg"
     },
     "gumowce":{
         podreczny:true,
         glowny:true,
-        en:"waders"
+        en:"waders",
+        image:"gumowce.jpg"
     },
     "polar":{
         podreczny:true,
         glowny:true,
-        en:"fleece"
+        en:"fleece",
+        image:"polar.jpg"
     },
     "koszula":{
         podreczny:true,
         glowny:true,
-        en:"shirt"
+        en:"shirt",
+        image:"koszula"
     },
     "krótkie spodenki":{
         podreczny:true,
@@ -189,152 +223,182 @@ exports.Data = {
     "ogrodniczki":{
         podreczny:true,
         glowny:true,
-        en:"dungarees"
+        en:"dungarees",
+        image:"ogrodniczki.jpg"
     },
     "portki":{
         podreczny:true,
         glowny:true,
-        en:"trousers"
+        en:"trousers",
+        image:"portki.jpg"
     },
     "bluzka":{
         podreczny:true,
         glowny:true,
-        en:"top"
+        en:"top",
+        image:"bluzka.jpg"
     },
     "bluza":{
         podreczny:true,
         glowny:true,
-        en:"hoodie"
+        en:"hoodie",
+        image:"bluza.png"
     },
     "halka":{
         podreczny:true,
         glowny:true,
-        en:"underskirt"
+        en:"underskirt",
+        image:"halka.jpg"
     },
     "szlafrok":{
         podreczny:true,
         glowny:true,
-        en:"dressing-gown"
+        en:"dressing-gown",
+        image:"szlafrok.jpg"
     },
     "piżama":{
         podreczny:true,
         glowny:true,
-        en:"pajamas"
+        en:"pajamas",
+        image:"piżama.jpg"
     },
     "pidżama":{
         podreczny:true,
         glowny:true,
-        en:"pyjamas"
+        en:"pyjamas",
+        image:"pidżama.jpg"
     },
     "sweter":{
         podreczny:true,
         glowny:true,
-        en:"jumper"
+        en:"jumper",
+        image:"sweter.jpg"
     },
     "pulower":{
         podreczny:true,
         glowny:true,
-        en:"pullover"
+        en:"pullover",
+        image:"pulower.jpg"
     },
     "nakrycie głowy":{
         podreczny:true,
         glowny:true,
-        en:"headgear"
+        en:"headgear",
+        image:"nakrycie głowy.jpg"
     },
     "beret":{
         podreczny:true,
         glowny:true,
-        en:"beret"
+        en:"beret",
+        image:"beret.jpg"
     },
     "kapelusz":{
         podreczny:true,
         glowny:true,
-        en:"hat"
+        en:"hat",
+        image:"kapelusz.jpg"
     },
     "pantofle":{
         podreczny:true,
         glowny:true,
-        en:"slippers"
+        en:"slippers",
+        image:"pantofle.jpg"
     },
     "plecak":{
         podreczny:true,
         glowny:true,
-        en:"backpack"
+        en:"backpack",
+        image:"plecak.jpg"
     },
     "walizka":{
         podreczny:true,
         glowny:true,
-        en:"suitcase"
+        en:"suitcase",
+        image:"walizka.jpeg"
     },
     "torba":{
         podreczny:true,
         glowny:true,
-        en:"bag"
+        en:"bag",
+        image:"torba.jpg"
     },
     "reklamówka":{
         podreczny:true,
         glowny:true,
-        en:"carrier bag"
+        en:"carrier bag",
+        image:"reklamówka.jpg"
     },
     "torebka":{
         podreczny:true,
         glowny:true,
-        en:"handbag"
+        en:"handbag",
+        image:"torebka.jpg"
     },
     "saszetka":{
         podreczny:true,
         glowny:true,
-        en:"sachet"
+        en:"sachet",
+        image:"saszetka.jpg"
     },
     "portfel":{
         podreczny:true,
         glowny:true,
-        en:"wallet"
+        en:"wallet",
+        image:"portfel.png"
     },
     "szalik":{
         podreczny:true,
         glowny:true,
-        en:"scarf"
+        en:"scarf",
+        image:"szalik.jpg"
     },
     "ramoneska":{
         podreczny:true,
         glowny:true,
-        en:"ramones"
+        en:"ramones",
+        image:"ramoneska.jpg"
     },
     "marynarka":{
         podreczny:true,
         glowny:true,
-        en:"jacket"
+        en:"jacket",
+        image:"marynarka.jpg"
     },
     "futro":{
         podreczny:true,
         glowny:true,
-        en:"fur"
+        en:"fur",
+        image:"futro.jpg"
     },
     "spódnica":{
         podreczny:true,
         glowny:true,
-        en:"skirt"
+        en:"skirt",
+        image:"spódnica.jpg"
     },
     "spodnie rybaczki":{
         podreczny:true,
         glowny:true,
-        en:"capri pants"
+        en:"capri pants",
+        image:"spodnie rybaczki.jpg"
     },
     "tunika":{
         podreczny:true,
         glowny:true,
-        en:"tunic"
+        en:"tunic",
+        image:"tunika.jpg"
     },
     "stanik":{
         podreczny:true,
         glowny:true,
-        en:"bra"
+        en:"bra",
+        image:"stanik.jpg"
     },
     "sukienka":{
         podreczny:true,
         glowny:true,
-        en:"dress"
+        en:"dress",
+        image:"sukienka.jpg"
     },
     "czapka z daszkiem":{
         podreczny:true,
@@ -344,87 +408,92 @@ exports.Data = {
     "opaska do włosów":{
         podreczny:true,
         glowny:true,
-        en:"hair band"
+        en:"hair band",
+        image:"opaska do włosów.jpg"
     },
     "chusta":{
         podreczny:true,
         glowny:true,
-        en:"shawl"
+        en:"shawl",
+        image:"chusta.jpg"
     },
     "apaszka":{
         podreczny:true,
         glowny:true,
-        en:"scarf"
+        en:"scarf",
+        image:"apaszka.jpg"
     },
     "legginsy":{
         podreczny:true,
         glowny:true,
-        en:"leggins"
+        en:"leggins",
+        image:"legginsy.jpg"
     },
     "torebka typu listonoszka":{
         podreczny:true,
         glowny:true,
-        en:"messenger bag"
+        en:"messenger bag",
+        image:"torebka typu listonoszka.jpg"
     },
     "torba na laptopa":{
         podreczny:true,
         glowny:true,
-        en:"laptop bag"
+        en:"laptop bag",
+        image:"torba na laptopa.jpg"
     },
     "aparat fotograficzny":{
         podreczny:true,
         glowny:true,
-        en:"camera"
+        en:"camera",
+        image:"aparat fotograficzny.jpg"
     },
     "aparat fotograficzny analogowy":{
         podreczny:true,
         glowny:true,
-        en:"analog camera"
-    },
-    "aparat fotograficzny cyfrowy":{
-        podreczny:true,
-        glowny:true,
-        en:"digital camera"
+        en:"analog camera",
+        image:"aparat fotograficzny analogowy.jpg"
     },
     "aparat cyfrowy":{
         podreczny:true,
         glowny:true,
-        en:"digital camera"
-    },
-    "aparat analogowy":{
-        podreczny:true,
-        glowny:true,
-        en:"analog camera"
+        en:"digital camera",
+        image:"aparat cyfrowy.jpg"
     },
     "kamera":{
         podreczny:true,
         glowny:true,
-        en:"camera"
+        en:"camera",
+        image:"kamera.png"
     },
     "kamera samochodowa":{
         podreczny:true,
         glowny:true,
-        en:"car camera"
+        en:"car camera",
+        image:"kamera samochodowa.jpg"
     },
     "laptop":{
         podreczny:true,
         glowny:true,
-        en:"laptop"
+        en:"laptop",
+        image:"laptop.jpg"
     },
     "notebook":{
         podreczny:true,
         glowny:true,
-        en:"notebook"
+        en:"notebook",
+        image:"notebook.jpg"
     },
     "odtwarzacz mp3":{
         podreczny:true,
         glowny:true,
-        en:"MP3 player"
+        en:"MP3 player",
+        image:"odtwarzacz mp3.jpg"
     },
     "walkman":{
         podreczny:true,
         glowny:true,
-        en:"walkman"
+        en:"walkman",
+        image:"walkman.jpg"
     },
     "odtwarzacz cd":{
         podreczny:true,
